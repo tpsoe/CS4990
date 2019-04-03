@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+ <head> 
+  <title>Android Platform</title> 
+  <meta property="og:title" content="Android Platform"> 
+  <meta name="description" content="<!-- hide description -->"> 
+  <meta property="og:description" content="<!-- hide description -->"> 
+  <meta property="og:url" content="https://developer.android.com/about"> 
+  <meta property="og:locale" content="en"> 
+  <meta property="og:site_name" content="Android Developers"> 
+  <meta property="og:type" content="website"> 
+  <meta name="theme-color" content="#78c257"> 
+  <meta charset="utf-8"> 
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link rel="manifest" href="/_pwa/android/manifest.json"> 
+  <link rel="preconnect" href="//www.gstatic.com" crossorigin> 
+  <link rel="preconnect" href="//fonts.gstatic.com" crossorigin> 
+  <link rel="preconnect" href="//fonts.googleapis.com" crossorigin> 
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"> 
+  <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/css/app.css"> 
+  <noscript> 
+   <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/css/ce_bundle.css"> 
+  </noscript> 
+  <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/images/favicon.png"> 
+  <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/images/touchicon-180.png">
+  <link rel="canonical" href="https://developer.android.com/about">
+  <link rel="search" type="application/opensearchdescription+xml" title="Android Developers" href="https://developer.android.com/s/opensearch.xml">
+ </head> 
+ <body type="landing" theme="android-theme" class="dac-landing-page" layout="full" pending> 
+  <devsite-progress type="indeterminate" id="app-progress"></devsite-progress> 
+  <div class="devsite-wrapper">
+   <devsite-header ds-is="header"> 
+    <div class="devsite-header--inner"> 
+     <div class="devsite-top-logo-row-wrapper-wrapper"> 
+      <div class="devsite-top-logo-row-wrapper"> 
+       <div class="devsite-top-logo-row"> 
+        <button type="button" id="devsite-hamburger-menu" class="devsite-header-icon-button button-flat material-icons gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Navigation menu button" visually-hidden aria-label="Close menu"> </button> 
+        <div class="devsite-product-name-wrapper"> 
+         <a href="https://developer.android.com/" class="devsite-site-logo-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Site logo"> <img src="https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/images/lockup.svg" class="devsite-site-logo" alt="Android Developers"> </a> 
+         <span class="devsite-product-name"> 
+          <ul class="devsite-breadcrumb-list"> 
+           <li class="devsite-breadcrumb-item"> </li> 
+          </ul> </span> 
+        </div> 
+        <div class="devsite-top-logo-row-middle"> 
+         <div class="devsite-header-upper-tabs"> 
+          <devsite-tabs ds-is="tabs" class="upper-tabs"> 
+           <div class="devsite-tabs-wrapper"> 
+            <tab active> 
+             <a href="https://developer.android.com/about" class="gc-analytics-event" title="Platform" aria-label="Platform, selected" data-category="Site-Wide Custom Events" data-label="Tab: Platform"> Platform </a> 
+            </tab> 
+            <tab> 
+             <a href="https://developer.android.com/studio" class="gc-analytics-event" title="Android Studio" data-category="Site-Wide Custom Events" data-label="Tab: Android Studio"> Android Studio </a> 
+            </tab> 
+            <tab> 
+             <a href="https://developer.android.com/distribute" class="gc-analytics-event" title="Google Play" data-category="Site-Wide Custom Events" data-label="Tab: Google Play"> Google Play </a> 
+            </tab> 
+            <tab> 
+             <a href="https://developer.android.com/jetpack" class="gc-analytics-event" title="Android Jetpack" data-category="Site-Wide Custom Events" data-label="Tab: Android Jetpack"> Android Jetpack </a> 
+            </tab> 
+            <tab> 
+             <a href="https://developer.android.com/docs" class="gc-analytics-event" title="Docs" data-category="Site-Wide Custom Events" data-label="Tab: Docs"> Docs </a> 
+            </tab> 
+            <tab> 
+             <a href="https://developer.android.com/news" class="gc-analytics-event" title="News" data-category="Site-Wide Custom Events" data-label="Tab: News"> News </a> 
+            </tab> 
+           </div> 
+          </devsite-tabs> 
+         </div> 
+         <devsite-search ds-is="search" enable-search enable-signin enable-suggestions enable-query-completion project-path=""> 
+          <form class="devsite-search-form" action="https://developer.android.com/s/results/" method="GET"> 
+           <div class="devsite-search-container"> 
+            <div id="searchbox" class="devsite-searchbox"> 
+             <input placeholder="Search" type="text" class="devsite-search-field devsite-search-query" name="q" value="" autocomplete="off" aria-label="Search box"> 
+             <div class="devsite-search-image material-icons"></div> 
+            </div> 
+            <button type="button" search-open class="devsite-search-button devsite-header-icon-button button-flat material-icons" aria-label="Open search box"></button> 
+           </div> 
+          </form> 
+          <button type="button" search-close class="devsite-search-button devsite-header-icon-button button-flat material-icons" aria-label="Close search box"></button> 
+         </devsite-search> 
+        </div> 
+        <devsite-user ds-is="user"></devsite-user> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="devsite-collapsible-section
+    "> 
+      <div class="devsite-header-background"> 
+       <div class="devsite-product-id-row"> 
+        <div class="devsite-product-description-row"> 
+         <ul class="devsite-breadcrumb-list"> 
+          <li class="devsite-breadcrumb-item"> <a href="https://developer.android.com/about" class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Lower Header" data-value="1"> About the platform </a> </li> 
+         </ul> 
+         <div class="devsite-product-description">
+          <!-- hide description -->
+         </div> 
+        </div> 
+       </div> 
+       <div class="devsite-doc-set-nav-row"> 
+        <devsite-tabs ds-is="tabs" class="lower-tabs"> 
+         <div class="devsite-tabs-wrapper"> 
+          <tab active> 
+           <a href="https://developer.android.com/about" class="gc-analytics-event" title="Overview" aria-label="Overview, selected" data-category="Site-Wide Custom Events" data-label="Tab: Overview"> Overview </a> 
+          </tab> 
+          <tab> 
+           <a href="https://developer.android.com/preview" class="gc-analytics-event" title="Releases" data-category="Site-Wide Custom Events" data-label="Tab: Releases"> Releases </a> 
+          </tab> 
+          <tab> 
+           <a href="https://developer.android.com/guide/platform" class="gc-analytics-event" title="Technology" data-category="Site-Wide Custom Events" data-label="Tab: Technology"> Technology </a> 
+          </tab> 
+          <tab> 
+           <a href="https://developer.android.com/topic/libraries/support-library" class="gc-analytics-event" title="Libraries" data-category="Site-Wide Custom Events" data-label="Tab: Libraries"> Libraries </a> 
+          </tab> 
+          <tab> 
+           <a href="https://developer.android.com/kotlin" class="gc-analytics-event" title="Kotlin" data-category="Site-Wide Custom Events" data-label="Tab: Kotlin"> Kotlin </a> 
+          </tab> 
+          <tab> 
+           <a href="https://developer.android.com/games" class="gc-analytics-event" title="Games" data-category="Site-Wide Custom Events" data-label="Tab: Games"> Games </a> 
+          </tab> 
+         </div> 
+        </devsite-tabs> 
+       </div> 
+      </div> 
+     </div>
+    </div> 
+   </devsite-header> 
+   <devsite-book-nav ds-is="book-nav" scrollbars hidden> 
+    <nav class="devsite-book-nav devsite-nav nocontent"> 
+     <div class="devsite-mobile-header"> 
+      <button type="button" id="devsite-close-nav" class="devsite-header-icon-button button-flat material-icons gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Close navigation" aria-label="Close navigation"> </button> 
+     </div> 
+     <div class="devsite-book-nav-wrapper"> 
+      <div class="devsite-mobile-nav-top"> 
+       <ul class="devsite-nav-list"> 
+        <li class="devsite-nav-item"> <a href="/about" class="devsite-nav-title gc-analytics-event
+            devsite-nav-active" data-category="Site-Wide Custom Events" data-label="Responsive Tab: Platform"> <span class="devsite-nav-text">Platform</span> </a> 
+         <ul class="devsite-nav-responsive-tabs"> 
+          <li class="devsite-nav-item"> <a href="/about" class="devsite-nav-title gc-analytics-event
+            devsite-nav-active" data-category="Site-Wide Custom Events" data-label="Responsive Tab: Overview"> <span class="devsite-nav-text">Overview</span> </a> </li> 
+          <li class="devsite-nav-item"> <a href="/preview" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Releases"> <span class="devsite-nav-text">Releases</span> </a> </li> 
+          <li class="devsite-nav-item"> <a href="/guide/platform" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Technology"> <span class="devsite-nav-text">Technology</span> </a> </li> 
+          <li class="devsite-nav-item"> <a href="/topic/libraries/support-library" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Libraries"> <span class="devsite-nav-text">Libraries</span> </a> </li> 
+          <li class="devsite-nav-item"> <a href="/kotlin" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Kotlin"> <span class="devsite-nav-text">Kotlin</span> </a> </li> 
+          <li class="devsite-nav-item"> <a href="/games" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Games"> <span class="devsite-nav-text">Games</span> </a> </li> 
+         </ul> </li> 
+        <li class="devsite-nav-item"> <a href="/studio" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Android Studio"> <span class="devsite-nav-text">Android Studio</span> </a> </li> 
+        <li class="devsite-nav-item"> <a href="/distribute" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Google Play"> <span class="devsite-nav-text">Google Play</span> </a> </li> 
+        <li class="devsite-nav-item"> <a href="/jetpack" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Android Jetpack"> <span class="devsite-nav-text">Android Jetpack</span> </a> </li> 
+        <li class="devsite-nav-item"> <a href="/docs" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Docs"> <span class="devsite-nav-text">Docs</span> </a> </li> 
+        <li class="devsite-nav-item"> <a href="/news" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: News"> <span class="devsite-nav-text">News</span> </a> </li> 
+       </ul> 
+      </div> 
+     </div> 
+    </nav> 
+   </devsite-book-nav> 
+   <div id="gc-wrapper"> 
+    <div class="devsite-main-content"> 
+     <devsite-toc ds-is="toc" class="devsite-nav" hidden></devsite-toc> 
+     <devsite-content ds-is="content"> 
+      <article class="devsite-article"> 
+       <article class="devsite-article-inner"> 
+        <div class="devsite-article-meta"> 
+         <ul class="devsite-breadcrumb-list"> 
+          <li class="devsite-breadcrumb-item"> <a href="https://developer.android.com/" class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="1"> Android Developers </a> </li> 
+          <li class="devsite-breadcrumb-item"> 
+           <div class="devsite-breadcrumb-guillemet material-icons"></div> <a href="https://developer.android.com/about" class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="2"> Platform </a> </li> 
+          <li class="devsite-breadcrumb-item"> 
+           <div class="devsite-breadcrumb-guillemet material-icons"></div> <a href="https://developer.android.com/about" class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="3"> Overview </a> </li> 
+         </ul> 
+        </div> 
+        <devsite-toc ds-is="toc" class="devsite-nav" devsite-toc-embedded hidden></devsite-toc> 
+        <div class="devsite-article-body clearfix
+      "> 
+         <meta name="description" content="Android powers billions of mobile devices in more than 190 countries around the world. It's the largest installed base of any mobile platform and growing fast—every day another million users power up their Android devices for the first…
+"> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-1-up
+                  "> 
+          <div class="dac-landing-row-hero"> 
+           <img src="https://developer.android.com/images/landing/android-logo.svg" alt="Android logo" width="265px"> 
+           <div class="dac-landing-row-hero-description"> 
+            <p> Android Q Beta, the next version of Android, sets you up to take advantage of a range of new experiences, from foldable devices to stronger protections for your users. </p> 
+           </div> 
+           <div class="dac-landing-row-hero-action"> 
+            <a href="https://developer.android.com/preview/" class="button dac-button dac-outline-button"> Learn about the latest release </a> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-2-up
+                  dac-landing-row dac-landing-row-collapse dac-landing-row-bg-blob-7" background="grey"> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-full-width-content dac-heading-large dac-landing-row-item-height-medium"> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="span-classdac-eyebrow-dac-dark-grey-eyebrow-data-eyebrowintroducing-a-hrefplatformtechnologyapp-bundle-android-app-bundle-a-span"> <span class="dac-eyebrow dac-dark-grey-eyebrow" data-eyebrow="Introducing"> <a href="https://developer.android.com/platform/technology/app-bundle/"> Android App Bundle </a> </span> </h3> 
+              <div class="devsite-landing-row-item-description-content"> 
+               <p> Make installs smaller and faster for your users. Upload your app using Android's new app publishing format and Google Play's Dynamic Delivery to generate and serve APKs that are optimized for each user's device. </p> 
+              </div> 
+              <div class="devsite-landing-row-item-buttons"> 
+               <a href="https://developer.android.com/platform/technology/app-bundle" class="button dac-button dac-alt-flat-button"> Learn more </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-full-width-media"> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <div class="devsite-landing-row-item-description-content"> 
+               <div class="dac-media"> 
+                <img src="https://developer.android.com/images/landing/android-app-bundle-promo.svg" alt="Android App Bundle logo" width="250" style="max-width: 40%"> 
+               </div> 
+              </div> 
+              <div class="devsite-landing-row-item-buttons"> 
+               <a href="https://developer.android.com/platform/technology/app-bundle" class="button dac-button dac-alt-flat-button"> Learn more </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-2-up
+                  "> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-grow-5 dac-landing-row dac-landing-row-item-invert dac-landing-row-item-height-large" background="grey"> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="span-classdac-eyebrow-data-eyebrowfeatures-a-hrefaboutversionspieandroid-90-whats-new-in-androidnbsp9nbsppie-a-span"> <span class="dac-eyebrow" data-eyebrow="Features"> <a href="https://developer.android.com/about/versions/pie/android-9.0"> What's new in Android&nbsp;9&nbsp;Pie </a> </span> </h3> 
+              <div class="devsite-landing-row-item-description-content"> 
+               <p> Simplicity, speed, and many new ways to extend your apps. </p> 
+               <div class="dac-illustration-block dac-illustration-block-edge"> 
+                <img alt="What's new in Android 9 Pie" src="https://developer.android.com/images/home/android-p-device-adaptive-battery_2x.png" style="max-width: 320px"> 
+               </div> 
+              </div> 
+              <div class="devsite-landing-row-item-buttons"> 
+               <a href="https://developer.android.com/about/versions/pie/android-9.0" class="button dac-button dac-alt-flat-button"> Learn more </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-grow-7 dac-landing-row dac-landing-row-bg-slate dac-landing-row-illustration-kotlin dac-landing-row-item-invert dac-landing-row-item-height-large"> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="span-classdac-eyebrow-dac-dark-grey-eyebrow-data-eyebrowfeatures-a-hrefkotlin-kotlin-a-span"> <span class="dac-eyebrow dac-dark-grey-eyebrow" data-eyebrow="Features"> <a href="https://developer.android.com/kotlin/"> Kotlin </a> </span> </h3> 
+              <div class="devsite-landing-row-item-description-content"> 
+               <p>Kotlin is already beloved by many Android developers for its combination of simplicity and power. So we're excited to make Kotlin development on Android a first-class experience.</p> 
+               <div class="dac-illustration-block"> 
+                <img src="https://developer.android.com/images/landing/kotlin-logo.svg" alt="Kotlin logo" style="max-width: 240px"> 
+               </div> 
+              </div> 
+              <div class="devsite-landing-row-item-buttons"> 
+               <a href="https://developer.android.com/kotlin" class="button dac-button dac-alt-flat-button"> Learn more </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-1-up
+                  " background="grey"> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+      "> 
+            <div class="dac-subtitle dac-center"> 
+             <h3>Android devices</h3> 
+             <p style="font-weight: 300;"> Android runs on devices of all shapes and sizes, providing you a vast opportunity for continued user engagement. </p> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-2-up
+                  dac-gutter" background="grey"> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-landing-row dac-grow-4 dac-landing-row-bg-green dac-landing-row-item-invert dac-landing-row-item-height-large"> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="span-classdac-eyebrow-data-eyebrowproducts-a-hrefwear-wear-os-by-google-a-span"> <span class="dac-eyebrow" data-eyebrow="Products"> <a href="https://developer.android.com/wear/"> Wear OS by Google </a> </span> </h3> 
+              <div class="devsite-landing-row-item-description-content"> 
+               <p> Make every minute matter with Wear OS by Google. Smartwatches that keep users connected to their health, the people and info they care about, and the Google Assistant — all from the wrist. </p> 
+               <div class="dac-illustration-block dac-illustration-block-edge"> 
+                <img src="https://developer.android.com/images/landing/wear-illustration.svg" alt="Wear OS by Google smartwatch"> 
+               </div> 
+              </div> 
+              <div class="devsite-landing-row-item-buttons"> 
+               <a href="https://developer.android.com/wear" class="button dac-button dac-alt-flat-button"> Learn more </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-landing-row dac-grow-8 dac-landing-row-item-height-large" background="white"> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="span-classdac-eyebrow-data-eyebrowproducts-a-hreftv-tv-a-span"> <span class="dac-eyebrow" data-eyebrow="Products"> <a href="https://developer.android.com/tv/"> TV </a> </span> </h3> 
+              <div class="devsite-landing-row-item-description-content"> 
+               <p> Build apps that let users experience your app's emersive content on the big screen. Users can discover your content recommendations on the home screen, and the leanback library provides APIs to help you build a great use experience for a remote control. </p> 
+               <div class="dac-illustration-block dac-illustration-block-edge-right"> 
+                <img src="https://developer.android.com/images/landing/tv-illustration.svg" alt="Android TV"> 
+               </div> 
+              </div> 
+              <div class="devsite-landing-row-item-buttons"> 
+               <a href="https://developer.android.com/tv" class="button dac-button dac-alt-flat-button"> Learn more </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-1-up
+                  dac-gutter" background="grey"> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-landing-row dac-illustration dac-illustration-auto dac-landing-row-media dac-landing-row-item-height-medium" background="white"> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="span-classdac-eyebrow-data-eyebrowproducts-a-hrefauto-auto-a-span"> <span class="dac-eyebrow" data-eyebrow="Products"> <a href="https://developer.android.com/auto/"> Auto </a> </span> </h3> 
+              <div class="devsite-landing-row-item-description-content"> 
+               <p> Write your apps for an in-car experience without having to worry about vehicle-specific hardware differences like screen resolution, software interfaces, knobs, and touch controls. </p> 
+              </div> 
+              <div class="devsite-landing-row-item-buttons"> 
+               <a href="https://developer.android.com/auto" class="button dac-button dac-alt-flat-button"> Learn more </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-2-up
+                  dac-gutter dac-bottom-spacing" background="grey"> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-grow-7 dac-landing-row dac-landing-row-item-height-large" background="white"> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="span-classdac-eyebrow-data-eyebrowproducts-a-hrefthings-things-a-span"> <span class="dac-eyebrow" data-eyebrow="Products"> <a href="https://developer.android.com/things/"> Things </a> </span> </h3> 
+              <div class="devsite-landing-row-item-description-content"> 
+               <p> Experiment with building apps for smart, connected devices that integrate with custom hardware peripherals. </p> 
+               <div class="dac-illustration-block dac-illustration-block-edge"> 
+                <img src="https://developer.android.com/images/landing/things-illustration-mobile.svg" class="dac-hidden-xs-up" alt="Android Things"> 
+                <img src="https://developer.android.com/images/landing/things-illustration.svg" class="dac-hidden-xs-down" alt="Android Things"> 
+               </div> 
+              </div> 
+              <div class="devsite-landing-row-item-buttons"> 
+               <a href="https://developer.android.com/things" class="button dac-button dac-alt-flat-button"> Learn more </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-grow-5 dac-landing-row dac-landing-row-bg-slate dac-landing-row-item-invert dac-landing-row-item-height-large"> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="span-classdac-eyebrow-data-eyebrowproducts-a-hrefchrome-os-chrome-os-a-span"> <span class="dac-eyebrow" data-eyebrow="Products"> <a href="https://developer.android.com/chrome-os/"> Chrome OS </a> </span> </h3> 
+              <div class="devsite-landing-row-item-description-content"> 
+               <p> You can now distribute your Android apps to Google Chrome OS devices, such as Chromebooks, through Google Play Store. </p> 
+               <div class="dac-illustration-block dac-illustration-block-edge"> 
+                <img src="https://developer.android.com/images/landing/chrome-os-illustration.svg" alt="Chrome OS devices"> 
+               </div> 
+              </div> 
+              <div class="devsite-landing-row-item-buttons"> 
+               <a href="https://developer.android.com/chrome-os" class="button dac-button dac-alt-flat-button"> Learn more </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+        </div> 
+       </article> 
+      </article> 
+     </devsite-content> 
+    </div> 
+    <devsite-footer-promos ds-is="footer-promos" class="devsite-footer"> 
+     <nav> 
+      <ul class="devsite-footer-promos-list"> 
+       <li class="devsite-footer-promo"> <a href="//twitter.com/AndroidDev" class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Twitter Promo"> <img class="devsite-footer-promo-icon" src="https://developer.android.com/_static/android/images/logo-twitter.svg" alt="Twitter"> Twitter </a> 
+        <div class="devsite-footer-promo-description">
+         Follow @AndroidDev on Twitter
+        </div> </li> 
+       <li class="devsite-footer-promo"> <a href="//www.youtube.com/user/androiddevelopers" class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer YouTube Promo"> <img class="devsite-footer-promo-icon" src="//www.gstatic.com/images/icons/material/product/2x/youtube_48dp.png" alt="YouTube"> YouTube </a> 
+        <div class="devsite-footer-promo-description">
+         Check out Android Developers on YouTube
+        </div> </li> 
+      </ul> 
+     </nav> 
+    </devsite-footer-promos> 
+    <devsite-footer-linkboxes ds-is="footer-linkboxes" class="devsite-footer"> 
+     <nav class="devsite-footer-linkboxes nocontent"> 
+      <ul class="devsite-footer-linkboxes-list"> 
+       <li class="devsite-footer-linkbox "> <h3 class="devsite-footer-linkbox-heading">More Android</h3> 
+        <ul class="devsite-footer-linkbox-list"> 
+         <li class="devsite-footer-linkbox-item"> <a href="//www.android.com" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 1)"> Android </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="//www.android.com/enterprise/" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 2)"> Enterprise </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="//www.android.com/security-center/" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 3)"> Security </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="//source.android.com" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 4)"> Source </a> </li> 
+        </ul> </li> 
+       <li class="devsite-footer-linkbox "> <h3 class="devsite-footer-linkbox-heading">Support</h3> 
+        <ul class="devsite-footer-linkbox-list"> 
+         <li class="devsite-footer-linkbox-item"> <a href="//issuetracker.google.com/issues/new?component=190923&amp;template=841312" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 1)"> Report platform bug </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="//issuetracker.google.com/issues/new?component=192697" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 2)"> Report documentation bug </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="//support.google.com/googleplay/android-developer" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 3)"> Google Play support </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="//docs.google.com/forms/d/e/1FAIpQLSf27XIxoFmNpTjTYdk-m1uKWGqEnd7_4C_E1AD5fdCfyTBWNA/viewform?usp=pp_url&amp;entry.1909689089&amp;entry.208743710&amp;entry.408796755&amp;entry.1341430893&amp;entry.594931249&amp;entry.1640656812&amp;entry.1759804042&amp;entry.1441312344=developer.android.com" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 4)"> Join user studies </a> </li> 
+        </ul> </li> 
+       <li class="devsite-footer-linkbox "> <h3 class="devsite-footer-linkbox-heading">Documentation</h3> 
+        <ul class="devsite-footer-linkbox-list"> 
+         <li class="devsite-footer-linkbox-item"> <a href="/guide" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 1)"> Developer guides </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="/design" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 2)"> Design guides </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="/reference" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 3)"> API reference </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="/samples" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 4)"> Samples </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="/studio/intro" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 5)"> Android Studio </a> </li> 
+        </ul> </li> 
+      </ul> 
+     </nav> 
+    </devsite-footer-linkboxes> 
+    <devsite-footer-utility ds-is="footer-utility" class="devsite-footer"> 
+     <div class="devsite-footer-utility"> 
+      <nav class="devsite-nav devsite-footer-sites"> 
+       <a href="https://developers.google.com/" class="devsite-footer-sites-logo-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Google Developers Link"> <img class="devsite-footer-sites-logo" src="https://developer.android.com/_static/images/lockup-color.png" alt="Google Developers"> </a> 
+       <ul class="devsite-footer-sites-list"> 
+        <li class="devsite-footer-sites-item"> <a href="//developer.android.com" class="devsite-footer-sites-link
+                  gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Android Link"> Android </a> </li> 
+        <li class="devsite-footer-sites-item"> <a href="//developer.chrome.com/home" class="devsite-footer-sites-link
+                  gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Chrome Link"> Chrome </a> </li> 
+        <li class="devsite-footer-sites-item"> <a href="//firebase.google.com" class="devsite-footer-sites-link
+                  gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Firebase Link"> Firebase </a> </li> 
+        <li class="devsite-footer-sites-item"> <a href="//cloud.google.com" class="devsite-footer-sites-link
+                  gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Google Cloud Platform Link"> Google Cloud Platform </a> </li> 
+        <li class="devsite-footer-sites-item"> <a href="//developers.google.com/products/" class="devsite-footer-sites-link
+                  gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer All products Link"> All products </a> </li> 
+       </ul> 
+      </nav> 
+      <nav class="devsite-nav"> 
+       <ul class="devsite-footer-utility-list"> 
+        <li class="devsite-footer-utility-item
+                 "> <a class="devsite-footer-utility-link
+                  gc-analytics-event" href="//policies.google.com/privacy" data-category="Site-Wide Custom Events" data-label="Footer Privacy link"> Privacy </a> </li> 
+        <li class="devsite-footer-utility-item
+                 "> <a class="devsite-footer-utility-link
+                  gc-analytics-event" href="https://developer.android.com/license" data-category="Site-Wide Custom Events" data-label="Footer License link"> License </a> </li> 
+        <li class="devsite-footer-utility-item
+                 "> <a class="devsite-footer-utility-link
+                  gc-analytics-event" href="https://developer.android.com/distribute/marketing-tools/brand-guidelines" data-category="Site-Wide Custom Events" data-label="Footer Brand guidelines link"> Brand guidelines </a> </li> 
+        <li class="devsite-footer-utility-item
+                 devsite-footer-utility-button"> <span class="devsite-footer-utility-description">Get news and tips by email</span> <a class="devsite-footer-utility-link
+                  gc-analytics-event" href="https://developer.android.com/newsletter/#subscribe" data-category="Site-Wide Custom Events" data-label="Footer Subscribe link"> Subscribe </a> </li> 
+       </ul> 
+       <form class="devsite-footer-utility-language"> 
+        <select class="devsite-footer-utility-language-select" name="language" track-name="click" track-type="languageSelector"> <option value="id" track-metadata-original-language="en" track-metadata-selected-language="id" track-name="changed" track-type="languageSelector"> Bahasa Indonesia </option> <option value="de" track-metadata-original-language="en" track-metadata-selected-language="de" track-name="changed" track-type="languageSelector"> Deutsch </option> <option value="en" track-metadata-original-language="en" track-metadata-selected-language="en" track-name="changed" track-type="languageSelector" selected> English </option> <option value="es" track-metadata-original-language="en" track-metadata-selected-language="es" track-name="changed" track-type="languageSelector"> Español </option> <option value="es_419" track-metadata-original-language="en" track-metadata-selected-language="es_419" track-name="changed" track-type="languageSelector"> Español (América Latina) </option> <option value="pt_br" track-metadata-original-language="en" track-metadata-selected-language="pt_br" track-name="changed" track-type="languageSelector"> Português Brasileiro </option> <option value="vi" track-metadata-original-language="en" track-metadata-selected-language="vi" track-name="changed" track-type="languageSelector"> Tiếng Việt </option> <option value="tr" track-metadata-original-language="en" track-metadata-selected-language="tr" track-name="changed" track-type="languageSelector"> Türkçe </option> <option value="fr" track-metadata-original-language="en" track-metadata-selected-language="fr" track-name="changed" track-type="languageSelector"> français </option> <option value="ru" track-metadata-original-language="en" track-metadata-selected-language="ru" track-name="changed" track-type="languageSelector"> Русский </option> <option value="th" track-metadata-original-language="en" track-metadata-selected-language="th" track-name="changed" track-type="languageSelector"> ภาษาไทย </option> <option value="ja" track-metadata-original-language="en" track-metadata-selected-language="ja" track-name="changed" track-type="languageSelector"> 日本語 </option> <option value="zh_cn" track-metadata-original-language="en" track-metadata-selected-language="zh_cn" track-name="changed" track-type="languageSelector"> 简体中文 </option> <option value="zh_tw" track-metadata-original-language="en" track-metadata-selected-language="zh_tw" track-name="changed" track-type="languageSelector"> 繁體中文 </option> <option value="ko" track-metadata-original-language="en" track-metadata-selected-language="ko" track-name="changed" track-type="languageSelector"> 한국어 </option> </select> 
+       </form> 
+      </nav> 
+     </div> 
+    </devsite-footer-utility> 
+   </div>
+  </div> 
+  <devsite-sitemask ds-is="site-mask"></devsite-sitemask> 
+  <devsite-snackbar ds-is="snackbar"></devsite-snackbar> 
+  <devsite-tooltip ds-is="tooltip"></devsite-tooltip> 
+  <devsite-analytics ds-is="analytics"> 
+   <script type="application/json" analytics>[{"metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}, "dimensions": {"dimension6": "en", "dimension4": "Android Developers", "dimension5": "en", "dimension3": false, "dimension1": "Signed out"}, "gaid": "UA-5831155-1"}, {"metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}, "dimensions": {"dimension6": "en", "dimension4": "Android Developers", "dimension5": "en", "dimension3": false, "dimension1": "Signed out"}, "gaid": "UA-49880327-2"}]</script> 
+   <script type="application/json" gtm>["GTM-KMSWPCJ"]</script> 
+  </devsite-analytics> 
+  <script>
+    (function(d,e,v,E,l,o,p,r,s,_,__){d['GoogleDevelopersObject']=[!0,l,o,p,r,s];
+    _=e.createElement(v);_.async=1;_.src=E;__=e.getElementsByTagName(v)[0];
+    __.parentNode.insertBefore(_,__);})(window, document, 'script',
+      'https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/js/app_loader.js',
+      'en',
+      'https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/js/devsite_app.js',
+      'https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android',
+      !0,
+      ['/_pwa/android/manifest.json',
+       '/_static/images/video-placeholder.svg',
+       'https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/images/favicon.png','https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/images/lockup.svg','https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons'],
+       'https://android-dot-devsite-v2-prod.appspot.com')
+   </script>  
+ </body>
+</html>

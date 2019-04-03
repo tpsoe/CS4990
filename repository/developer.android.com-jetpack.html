@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="en">
+ <head> 
+  <title>Android Jetpack</title> 
+  <meta property="og:title" content="Android Jetpack"> 
+  <meta name="description" content="<!-- hide description -->"> 
+  <meta property="og:description" content="<!-- hide description -->"> 
+  <meta property="og:url" content="https://developer.android.com/jetpack"> 
+  <meta property="og:locale" content="en"> 
+  <meta property="og:site_name" content="Android Developers"> 
+  <meta property="og:type" content="website"> 
+  <meta name="theme-color" content="#78c257"> 
+  <meta charset="utf-8"> 
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link rel="manifest" href="/_pwa/android/manifest.json"> 
+  <link rel="preconnect" href="//www.gstatic.com" crossorigin> 
+  <link rel="preconnect" href="//fonts.gstatic.com" crossorigin> 
+  <link rel="preconnect" href="//fonts.googleapis.com" crossorigin> 
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"> 
+  <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/css/app.css"> 
+  <noscript> 
+   <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/css/ce_bundle.css"> 
+  </noscript> 
+  <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/images/favicon.png"> 
+  <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/images/touchicon-180.png">
+  <link rel="canonical" href="https://developer.android.com/jetpack">
+  <link rel="search" type="application/opensearchdescription+xml" title="Android Developers" href="https://developer.android.com/s/opensearch.xml">
+ </head> 
+ <body type="landing" theme="android-theme" class="dac-full-width-page dac-jetpack-page" layout="full" pending> 
+  <devsite-progress type="indeterminate" id="app-progress"></devsite-progress> 
+  <div class="devsite-wrapper">
+   <devsite-header ds-is="header"> 
+    <div class="devsite-header--inner"> 
+     <div class="devsite-top-logo-row-wrapper-wrapper"> 
+      <div class="devsite-top-logo-row-wrapper"> 
+       <div class="devsite-top-logo-row"> 
+        <button type="button" id="devsite-hamburger-menu" class="devsite-header-icon-button button-flat material-icons gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Navigation menu button" visually-hidden aria-label="Close menu"> </button> 
+        <div class="devsite-product-name-wrapper"> 
+         <a href="https://developer.android.com/" class="devsite-site-logo-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Site logo"> <img src="https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/images/lockup.svg" class="devsite-site-logo" alt="Android Developers"> </a> 
+         <span class="devsite-product-name"> 
+          <ul class="devsite-breadcrumb-list"> 
+           <li class="devsite-breadcrumb-item"> </li> 
+          </ul> </span> 
+        </div> 
+        <div class="devsite-top-logo-row-middle"> 
+         <div class="devsite-header-upper-tabs"> 
+          <devsite-tabs ds-is="tabs" class="upper-tabs"> 
+           <div class="devsite-tabs-wrapper"> 
+            <tab> 
+             <a href="https://developer.android.com/about" class="gc-analytics-event" title="Platform" data-category="Site-Wide Custom Events" data-label="Tab: Platform"> Platform </a> 
+            </tab> 
+            <tab> 
+             <a href="https://developer.android.com/studio" class="gc-analytics-event" title="Android Studio" data-category="Site-Wide Custom Events" data-label="Tab: Android Studio"> Android Studio </a> 
+            </tab> 
+            <tab> 
+             <a href="https://developer.android.com/distribute" class="gc-analytics-event" title="Google Play" data-category="Site-Wide Custom Events" data-label="Tab: Google Play"> Google Play </a> 
+            </tab> 
+            <tab active> 
+             <a href="https://developer.android.com/jetpack" class="gc-analytics-event" title="Android Jetpack" aria-label="Android Jetpack, selected" data-category="Site-Wide Custom Events" data-label="Tab: Android Jetpack"> Android Jetpack </a> 
+            </tab> 
+            <tab> 
+             <a href="https://developer.android.com/docs" class="gc-analytics-event" title="Docs" data-category="Site-Wide Custom Events" data-label="Tab: Docs"> Docs </a> 
+            </tab> 
+            <tab> 
+             <a href="https://developer.android.com/news" class="gc-analytics-event" title="News" data-category="Site-Wide Custom Events" data-label="Tab: News"> News </a> 
+            </tab> 
+           </div> 
+          </devsite-tabs> 
+         </div> 
+         <devsite-search ds-is="search" enable-search enable-signin enable-suggestions enable-query-completion project-path=""> 
+          <form class="devsite-search-form" action="https://developer.android.com/s/results/" method="GET"> 
+           <div class="devsite-search-container"> 
+            <div id="searchbox" class="devsite-searchbox"> 
+             <input placeholder="Search" type="text" class="devsite-search-field devsite-search-query" name="q" value="" autocomplete="off" aria-label="Search box"> 
+             <div class="devsite-search-image material-icons"></div> 
+            </div> 
+            <button type="button" search-open class="devsite-search-button devsite-header-icon-button button-flat material-icons" aria-label="Open search box"></button> 
+           </div> 
+          </form> 
+          <button type="button" search-close class="devsite-search-button devsite-header-icon-button button-flat material-icons" aria-label="Close search box"></button> 
+         </devsite-search> 
+        </div> 
+        <devsite-user ds-is="user"></devsite-user> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="devsite-collapsible-section
+    "> 
+      <div class="devsite-header-background"> 
+       <div class="devsite-product-id-row"> 
+        <div class="devsite-product-description-row"> 
+         <ul class="devsite-breadcrumb-list"> 
+          <li class="devsite-breadcrumb-item"> <a href="https://developer.android.com/jetpack" class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Lower Header" data-value="1"> Android Jetpack </a> </li> 
+         </ul> 
+         <div class="devsite-product-description">
+          <!-- hide description -->
+         </div> 
+        </div> 
+       </div> 
+       <div class="devsite-doc-set-nav-row"> 
+        <devsite-tabs ds-is="tabs" class="lower-tabs"> 
+         <div class="devsite-tabs-wrapper"> 
+          <tab active> 
+           <a href="https://developer.android.com/jetpack" class="gc-analytics-event" title="Overview" aria-label="Overview, selected" data-category="Site-Wide Custom Events" data-label="Tab: Overview"> Overview </a> 
+          </tab> 
+          <tab> 
+           <a href="https://developer.android.com/jetpack/docs/getting-started" class="gc-analytics-event" title="Get Started" data-category="Site-Wide Custom Events" data-label="Tab: Get Started"> Get Started </a> 
+          </tab> 
+          <tab> 
+           <a href="https://developer.android.com/jetpack/androidx" class="gc-analytics-event" title="AndroidX" data-category="Site-Wide Custom Events" data-label="Tab: AndroidX"> AndroidX </a> 
+          </tab> 
+          <tab> 
+           <a href="https://developer.android.com/jetpack/docs/feedback" class="gc-analytics-event" title="Community" data-category="Site-Wide Custom Events" data-label="Tab: Community"> Community </a> 
+          </tab> 
+         </div> 
+        </devsite-tabs> 
+       </div> 
+      </div> 
+     </div>
+    </div> 
+   </devsite-header> 
+   <devsite-book-nav ds-is="book-nav" scrollbars hidden> 
+    <nav class="devsite-book-nav devsite-nav nocontent"> 
+     <div class="devsite-mobile-header"> 
+      <button type="button" id="devsite-close-nav" class="devsite-header-icon-button button-flat material-icons gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Close navigation" aria-label="Close navigation"> </button> 
+     </div> 
+     <div class="devsite-book-nav-wrapper"> 
+      <div class="devsite-mobile-nav-top"> 
+       <ul class="devsite-nav-list"> 
+        <li class="devsite-nav-item"> <a href="/about" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Platform"> <span class="devsite-nav-text">Platform</span> </a> </li> 
+        <li class="devsite-nav-item"> <a href="/studio" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Android Studio"> <span class="devsite-nav-text">Android Studio</span> </a> </li> 
+        <li class="devsite-nav-item"> <a href="/distribute" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Google Play"> <span class="devsite-nav-text">Google Play</span> </a> </li> 
+        <li class="devsite-nav-item"> <a href="/jetpack" class="devsite-nav-title gc-analytics-event
+            devsite-nav-active" data-category="Site-Wide Custom Events" data-label="Responsive Tab: Android Jetpack"> <span class="devsite-nav-text">Android Jetpack</span> </a> 
+         <ul class="devsite-nav-responsive-tabs"> 
+          <li class="devsite-nav-item"> <a href="/jetpack" class="devsite-nav-title gc-analytics-event
+            devsite-nav-active" data-category="Site-Wide Custom Events" data-label="Responsive Tab: Overview"> <span class="devsite-nav-text">Overview</span> </a> </li> 
+          <li class="devsite-nav-item"> <a href="/jetpack/docs/getting-started" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Get Started"> <span class="devsite-nav-text">Get Started</span> </a> </li> 
+          <li class="devsite-nav-item"> <a href="/jetpack/androidx" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: AndroidX"> <span class="devsite-nav-text">AndroidX</span> </a> </li> 
+          <li class="devsite-nav-item"> <a href="/jetpack/docs/feedback" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Community"> <span class="devsite-nav-text">Community</span> </a> </li> 
+         </ul> </li> 
+        <li class="devsite-nav-item"> <a href="/docs" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Docs"> <span class="devsite-nav-text">Docs</span> </a> </li> 
+        <li class="devsite-nav-item"> <a href="/news" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: News"> <span class="devsite-nav-text">News</span> </a> </li> 
+       </ul> 
+      </div> 
+     </div> 
+    </nav> 
+   </devsite-book-nav> 
+   <div id="gc-wrapper"> 
+    <div class="devsite-main-content"> 
+     <devsite-toc ds-is="toc" class="devsite-nav" hidden></devsite-toc> 
+     <devsite-content ds-is="content"> 
+      <article class="devsite-article"> 
+       <article class="devsite-article-inner"> 
+        <div class="devsite-article-meta"> 
+         <ul class="devsite-breadcrumb-list"> 
+          <li class="devsite-breadcrumb-item"> <a href="https://developer.android.com/" class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="1"> Android Developers </a> </li> 
+          <li class="devsite-breadcrumb-item"> 
+           <div class="devsite-breadcrumb-guillemet material-icons"></div> <a href="https://developer.android.com/jetpack" class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="2"> Android Jetpack </a> </li> 
+          <li class="devsite-breadcrumb-item"> 
+           <div class="devsite-breadcrumb-guillemet material-icons"></div> <a href="https://developer.android.com/jetpack" class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="3"> Overview </a> </li> 
+         </ul> 
+        </div> 
+        <devsite-toc ds-is="toc" class="devsite-nav" devsite-toc-embedded hidden></devsite-toc> 
+        <div class="devsite-article-body clearfix
+      "> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-1-up
+                  "> 
+          <div class="dac-sub-hero"> 
+           <div class="dac-sub-hero-image dac-grow-2"> 
+            <img alt="" src="https://developer.android.com/images/jetpack/jetpack-hero.svg"> 
+           </div> 
+           <div class="dac-sub-hero-copy dac-grow-3"> 
+            <h1>Android Jetpack</h1> 
+            <div class="dac-sub-hero-description"> 
+             <p>Jetpack is a collection of Android software components to make it easier for you to develop great Android apps. These components help you follow best practices, free you from writing boilerplate code, and simplify complex tasks, so you can focus on the code you care about.</p> 
+             <p>Jetpack comprises the <a href="https://developer.android.com/jetpack/androidx">androidx.*</a> package libraries, unbundled from the platform APIs. This means that it offers backward compatibility and is updated more frequently than the Android platform, making sure you always have access to the latest and greatest versions of the Jetpack components.</p> 
+            </div> 
+            <div class="dac-sub-hero-buttons"> 
+             <a href="https://developer.android.com/jetpack/docs/getting-started/" class="button dac-button dac-outline-button">Get started</a> 
+             <a href="https://www.youtube.com/watch?v=LmkKFCfmnhQ&amp;feature=youtu.be" class="button dac-button dac-flat-button">Watch the intro video</a> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-3-up
+                  dac-features dac-bottom-spacing"> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      "> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="accelerate-development"> Accelerate development</h3> 
+              <div class="devsite-landing-row-item-description-content"> 
+               <img height="143" width="143" src="https://developer.android.com/images/jetpack/accelerate-development.svg"> Components are individually adoptable but built to work together while taking advantage of Kotlin language features that make you more productive. 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      "> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="eliminate-boilerplate-code"> Eliminate boilerplate code</h3> 
+              <div class="devsite-landing-row-item-description-content"> 
+               <img height="138" width="159" src="https://developer.android.com/images/jetpack/eliminate-boilerplate.svg"> Android Jetpack manages tedious activities like background tasks, navigation, and lifecycle management, so you can focus on what makes your app great. 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      "> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="build-high-quality-robust-apps"> Build high quality, robust apps</h3> 
+              <div class="devsite-landing-row-item-description-content"> 
+               <img height="168" width="143" src="https://developer.android.com/images/jetpack/robust-apps.svg"> Built around modern design practices, Android Jetpack components enable fewer crashes and less memory leaked with backwards-compatibility baked in. 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-1-up
+                  "> 
+          <h2>Android Jetpack Components</h2> 
+          <div class="dac-sub-hero-description"> 
+           <p>Android Jetpack components are a collection of libraries that are individually adoptable and built to work together while taking advantage of Kotlin language features that make you more productive. Use them all or mix and match!</p> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-4-up
+                  dac-components"> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+      dac-component dac-foundation-component"> 
+            <div class="devsite-landing-row-item-media
+            "> 
+             <figure class="devsite-landing-row-item-image"> 
+              <img src="https://developer.android.com/images/jetpack/icons/foundation-components.svg" srcset="" sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 330px"> 
+             </figure> 
+            </div> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="foundation-p-idfoundation-componentsbrfoundation-components-provide-cross-cutting-functionality-like-backwards-compatibility-testing-and-kotlin-language-supportp"> Foundation <p id="foundation-components"><br>Foundation components provide cross-cutting functionality like backwards compatibility, testing and Kotlin language support.</p></h3> 
+              <div class="devsite-landing-row-item-description-content"> 
+               <ul> 
+                <li> <a href="https://developer.android.com/topic/libraries/support-library/packages.html#v7-appcompat"><h4 id="appcompat">AppCompat</h4></a> <p>Degrade gracefully on older versions of Android</p> </li> 
+                <li> <a href="https://developer.android.com/kotlin/ktx.html"><h4 id="ktx">Android KTX</h4></a> <p>Write more concise, idiomatic Kotlin code</p> </li> 
+                <li> <a href="https://developer.android.com/studio/build/multidex.html"><h4 id="multidex">Multidex</h4></a> <p>Provide support for apps with multiple DEX files</p> </li> 
+                <li> <a href="https://developer.android.com/topic/libraries/testing-support-library/index.html"><h4 id="test">Test</h4></a> <p>An Android testing framework for unit and runtime UI tests</p> </li> 
+               </ul> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+      dac-component dac-architecture-component"> 
+            <div class="devsite-landing-row-item-media
+            "> 
+             <figure class="devsite-landing-row-item-image"> 
+              <img src="https://developer.android.com/images/jetpack/icons/architecture-components.svg" srcset="" sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 330px"> 
+             </figure> 
+            </div> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="architecture-p-id-architecture-componentsbra-stylecolor039be5displayinline-hreftopiclibrariesarchitecturearchitecture-componentsa-help-you-design-robust-testable-and-maintainable-appsp"> Architecture <p id="architecture-components"><br><a style="color:#039be5;display:inline" href="https://developer.android.com/topic/libraries/architecture/">Architecture components</a> help you design robust, testable and maintainable apps.</p></h3> 
+              <div class="devsite-landing-row-item-description-content"> 
+               <ul> 
+                <li> <a href="https://developer.android.com/topic/libraries/data-binding/"><h4>Data Binding</h4></a> <p>Declaratively bind observable data to UI elements</p> </li> 
+                <li> <a href="https://developer.android.com/topic/libraries/architecture/lifecycle"><h4>Lifecycles</h4></a> <p>Manage your activity and fragment lifecycles</p> </li> 
+                <li> <a href="https://developer.android.com/topic/libraries/architecture/livedata"><h4>LiveData</h4></a> <p>Notify views when underlying database changes</p> </li> 
+                <li> <a href="https://developer.android.com/topic/libraries/architecture/navigation.html"><h4>Navigation</h4></a> <p>Handle everything needed for in-app navigation</p> </li> 
+                <li> <a href="https://developer.android.com/topic/libraries/architecture/paging/"><h4>Paging</h4></a> <p>Gradually load information on demand from your data source</p> </li> 
+                <li> <a href="https://developer.android.com/topic/libraries/architecture/room"><h4>Room</h4></a> <p>Fluent SQLite database access</p> </li> 
+                <li> <a href="https://developer.android.com/topic/libraries/architecture/viewmodel"><h4>ViewModel</h4></a> <p>Manage UI-related data in a lifecycle-conscious way</p> </li> 
+                <li> <a href="https://developer.android.com/topic/libraries/architecture/workmanager"><h4>WorkManager</h4></a> <p>Manage your Android background jobs</p> </li> 
+               </ul> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+      dac-component dac-behavior-component"> 
+            <div class="devsite-landing-row-item-media
+            "> 
+             <figure class="devsite-landing-row-item-image"> 
+              <img src="https://developer.android.com/images/jetpack/icons/behavior-components.svg" srcset="" sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 330px"> 
+             </figure> 
+            </div> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="behavior-p-idbehavior-componentsbrbehavior-components-help-your-app-integrate-with-standard-android-services-like-notifications-permissions-sharing-and-the-assistantp"> Behavior <p id="behavior-components"><br>Behavior components help your app integrate with standard Android services like notifications, permissions, sharing and the Assistant.</p></h3> 
+              <div class="devsite-landing-row-item-description-content"> 
+               <ul> 
+                <li> <a href="https://developer.android.com/reference/android/app/DownloadManager"><h4>Download manager</h4></a> <p>Schedule and manage large downloads</p> </li> 
+                <li> <a href="https://developer.android.com/guide/topics/media-apps/media-apps-overview.html"><h4>Media &amp; playback</h4></a> <p>Backwards compatible APIs for media playback and routing (including Google Cast)</p> </li> 
+                <li> <a href="https://developer.android.com/guide/topics/ui/notifiers/notifications.html"><h4>Notifications</h4></a> <p>Provides a backwards-compatible notification API with support for Wear and Auto</p> </li> 
+                <li> <a href="https://developer.android.com/guide/topics/permissions/index.html"><h4>Permissions</h4></a> <p>Compatibility APIs for checking and requesting app permissions</p> </li> 
+                <li> <a href="https://developer.android.com/guide/topics/ui/settings"><h4>Preferences</h4></a> <p>Create interactive settings screens</p> </li> 
+                <li> <a href="https://developer.android.com/training/sharing/shareaction"><h4>Sharing</h4></a> <p>Provides a share action suitable for an app’s action bar</p> </li> 
+                <li> <a href="https://developer.android.com/guide/slices"><h4>Slices</h4></a> <p>Create flexible UI elements that can display app data outside the app</p> </li> 
+               </ul> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+      dac-component dac-ui-component"> 
+            <div class="devsite-landing-row-item-media
+            "> 
+             <figure class="devsite-landing-row-item-image"> 
+              <img src="https://developer.android.com/images/jetpack/icons/ui-components.svg" srcset="" sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 330px"> 
+             </figure> 
+            </div> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="ui-p-id-ui-componentsbrui-components-provide-widgets-and-helpers-to-make-your-app-not-only-easy-but-delightful-to-usep"> UI <p id="ui-components"><br>UI components provide widgets and helpers to make your app not only easy, but delightful to use.</p></h3> 
+              <div class="devsite-landing-row-item-description-content"> 
+               <ul> 
+                <li> <a href="https://developer.android.com/training/animation/"><h4>Animation &amp; transitions</h4></a> <p>Move widgets and transition between screens</p> </li> 
+                <li> <a href="https://developer.android.com/auto"><h4>Auto</h4></a> <p>Components to help develop apps for Android Auto</p> </li> 
+                <li> <a href="https://developer.android.com/guide/topics/ui/look-and-feel/emoji-compat"><h4>Emoji</h4></a> <p>Enable an up-to-date emoji font on older platforms</p> </li> 
+                <li> <a href="https://developer.android.com/guide/components/fragments"><h4>Fragment</h4></a> <p>A basic unit of composable UI</p> </li> 
+                <li> <a href="https://developer.android.com/guide/topics/ui/declaring-layout"><h4>Layout</h4></a> <p>Lay out widgets using different algorithms</p> </li> 
+                <li> <a href="https://developer.android.com/training/material/palette-colors"><h4>Palette</h4></a> <p>Pull useful information out of color palettes</p> </li> 
+                <li> <a href="https://developer.android.com/tv"><h4>TV</h4></a> <p>Components to help develop apps for Android TV</p> </li> 
+                <li> <a href="https://developer.android.com/wear"><h4>Wear OS by Google</h4></a> <p>Components to help develop apps for Wear</p> </li> 
+               </ul> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-1-up
+                  "> 
+          <header class="devsite-landing-row-header"> 
+           <div class="devsite-landing-row-header-text"> 
+            <h2 id="latest-developer-stories"> Latest developer stories</h2> 
+            <div class="devsite-landing-row-description"> 
+             <div class="resource-widget" data-query="collection:jetpack/latest" data-sortorder="-timestamp" data-initial-results="4" data-items-per-page="4" data-maxresults="16" data-show-authors="true"> 
+             </div> 
+            </div> 
+           </div> 
+          </header> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-1-up
+                  "> 
+          <header class="devsite-landing-row-header"> 
+           <div class="devsite-landing-row-header-text"> 
+            <h2 id="latest-news-and-videos"> Latest news and videos</h2> 
+            <div class="devsite-landing-row-description"> 
+             <div class="resource-widget" data-query="
+  collection:topic/libraries/foundation,type:blog+tag:foundation,type:youtube+tag:foundation,
+  collection:topic/libraries/arch,type:blog+tag:arch,type:youtube+tag:arch,
+  collection:topic/libraries/behavior,type:blog+tag:behavior,type:youtube+tag:behavior,
+  collection:topic/libraries/ui,type:blog+tag:ui,type:youtube+tag:ui" data-sortorder="-timestamp" data-initial-results="4" data-items-per-page="4" data-maxresults="16" data-show-authors="true"> 
+             </div> 
+            </div> 
+           </div> 
+          </header> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-2-up
+                  "> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+      dac-success-story dac-testimonial dac-landing-row-bg-yellow"> 
+            <div class="devsite-landing-row-item-media
+            "> 
+             <figure class="devsite-landing-row-item-image"> 
+              <a href="https://play.google.com/store/apps/details?id=in.redbus.android"> <img src="https://developer.android.com/images/jetpack/icons/redbus.png" srcset="https://developer.android.com/images/jetpack/icons/redbus_36.png 36w,https://developer.android.com/images/jetpack/icons/redbus_48.png 48w,https://developer.android.com/images/jetpack/icons/redbus_72.png 72w,https://developer.android.com/images/jetpack/icons/redbus_96.png 96w,https://developer.android.com/images/jetpack/icons/redbus_480.png 480w,https://developer.android.com/images/jetpack/icons/redbus_720.png 720w,https://developer.android.com/images/jetpack/icons/redbus_856.png 856w,https://developer.android.com/images/jetpack/icons/redbus_960.png 960w,https://developer.android.com/images/jetpack/icons/redbus_1440.png 1440w,https://developer.android.com/images/jetpack/icons/redbus_1920.png 1920w,https://developer.android.com/images/jetpack/icons/redbus_2880.png 2880w" sizes="(max-width: 600px) 100vw, (max-width: 840px) 50vw, 700px"> </a> 
+             </figure> 
+            </div> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <div class="devsite-landing-row-item-description-content"> 
+               <p class="dac-eyebrow dac-dark-grey-eyebrow" data-eyebrow="Testimonial"> "WorkManager has simplified the way redBus app delivers information to it's backend servers. WorkManager library's capability to handle parameters like network connectivity, battery and use appropriate handlers like AlarmManager or JobScheduler has enabled us to concentrate on building business logics and offloading execution complexity to WorkManager." </p> 
+               <p> Dinesh Shanmugam, Android Lead, <a style="color:#414141;" href="https://play.google.com/store/apps/details?id=in.redbus.android"> <strong>redBus.in</strong></a> </p> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+      dac-success-story dac-testimonial dac-landing-row-bg-blue"> 
+            <div class="devsite-landing-row-item-media
+            "> 
+             <figure class="devsite-landing-row-item-image"> 
+              <a href="https://play.google.com/store/apps/details?id=com.vacationrentals.homeaway&amp;hl=en_US"> <img src="https://developer.android.com/images/jetpack/icons/homeaway.png" srcset="https://developer.android.com/images/jetpack/icons/homeaway_36.png 36w,https://developer.android.com/images/jetpack/icons/homeaway_48.png 48w,https://developer.android.com/images/jetpack/icons/homeaway_72.png 72w,https://developer.android.com/images/jetpack/icons/homeaway_96.png 96w,https://developer.android.com/images/jetpack/icons/homeaway_480.png 480w,https://developer.android.com/images/jetpack/icons/homeaway_720.png 720w,https://developer.android.com/images/jetpack/icons/homeaway_856.png 856w,https://developer.android.com/images/jetpack/icons/homeaway_960.png 960w,https://developer.android.com/images/jetpack/icons/homeaway_1440.png 1440w,https://developer.android.com/images/jetpack/icons/homeaway_1920.png 1920w,https://developer.android.com/images/jetpack/icons/homeaway_2880.png 2880w" sizes="(max-width: 600px) 100vw, (max-width: 840px) 50vw, 700px"> </a> 
+             </figure> 
+            </div> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <div class="devsite-landing-row-item-description-content"> 
+               <p class="dac-eyebrow dac-dark-grey-eyebrow" data-eyebrow="Testimonial"> “Android Jetpack Navigation is well-designed and fully configurable. We refactored our legacy navigation drawer using custom views, and it allowed us to get rid of all anti-patterns. We intend to adopt it more broadly across our app.” </p> 
+               <p> Emery Coxe, Android Lead, <a href="https://play.google.com/store/apps/details?id=com.vacationrentals.homeaway&amp;hl=en_US"> <strong>HomeAway</strong></a> </p> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-2-up
+                  "> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+      dac-success-story dac-testimonial dac-landing-row-bg-slate"> 
+            <div class="devsite-landing-row-item-media
+            "> 
+             <figure class="devsite-landing-row-item-image"> 
+              <a href="https://play.google.com/store/apps/details?id=com.strava"> <img src="https://developer.android.com/images/jetpack/icons/strava.png" srcset="https://developer.android.com/images/jetpack/icons/strava_36.png 36w,https://developer.android.com/images/jetpack/icons/strava_48.png 48w,https://developer.android.com/images/jetpack/icons/strava_72.png 72w,https://developer.android.com/images/jetpack/icons/strava_96.png 96w,https://developer.android.com/images/jetpack/icons/strava_480.png 480w,https://developer.android.com/images/jetpack/icons/strava_720.png 720w,https://developer.android.com/images/jetpack/icons/strava_856.png 856w,https://developer.android.com/images/jetpack/icons/strava_960.png 960w,https://developer.android.com/images/jetpack/icons/strava_1440.png 1440w,https://developer.android.com/images/jetpack/icons/strava_1920.png 1920w,https://developer.android.com/images/jetpack/icons/strava_2880.png 2880w" sizes="(max-width: 600px) 100vw, (max-width: 840px) 50vw, 700px"> </a> 
+             </figure> 
+            </div> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <div class="devsite-landing-row-item-description-content"> 
+               <p class="dac-eyebrow dac-dark-grey-eyebrow" data-eyebrow="Testimonial"> "Strong support in Android Studio with plentiful static checks is a key ingredient that makes working with Room so enjoyable." </p> 
+               <p> Adam Simek, Engineer, <a href="https://play.google.com/store/apps/details?id=com.strava"> <strong>Strava</strong></a> </p> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+      dac-success-story dac-testimonial dac-landing-row-bg-green"> 
+            <div class="devsite-landing-row-item-media
+            "> 
+             <figure class="devsite-landing-row-item-image"> 
+              <a href="https://play.google.com/store/apps/details?id=com.clearchannel.iheartradio.controller"> <img src="https://developer.android.com/images/jetpack/icons/iheartradio.png" srcset="https://developer.android.com/images/jetpack/icons/iheartradio_36.png 36w,https://developer.android.com/images/jetpack/icons/iheartradio_48.png 48w,https://developer.android.com/images/jetpack/icons/iheartradio_72.png 72w,https://developer.android.com/images/jetpack/icons/iheartradio_96.png 96w,https://developer.android.com/images/jetpack/icons/iheartradio_480.png 480w,https://developer.android.com/images/jetpack/icons/iheartradio_720.png 720w,https://developer.android.com/images/jetpack/icons/iheartradio_856.png 856w,https://developer.android.com/images/jetpack/icons/iheartradio_960.png 960w,https://developer.android.com/images/jetpack/icons/iheartradio_1440.png 1440w,https://developer.android.com/images/jetpack/icons/iheartradio_1920.png 1920w,https://developer.android.com/images/jetpack/icons/iheartradio_2880.png 2880w" sizes="(max-width: 600px) 100vw, (max-width: 840px) 50vw, 700px"> </a> 
+             </figure> 
+            </div> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <div class="devsite-landing-row-item-description-content"> 
+               <p class="dac-eyebrow dac-dark-grey-eyebrow" data-eyebrow="Testimonial"> "Getting started with Room was easy and straightforward. It definitely makes us write cleaner code and helps us avoid many types of errors from the get-go." </p> 
+               <p> Sergio Teran, Android engineer, <a href="https://play.google.com/store/apps/details?id=com.clearchannel.iheartradio.controller"> <strong>iHeartRadio</strong></a> </p>
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-1-up
+                  dac-cta dac-center"> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      devsite-landing-row-item-no-padding"> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <div class="devsite-landing-row-item-buttons"> 
+               <a href="https://developer.android.com/jetpack/testimonials" class="button dac-button dac-outline-button"> View more </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-1-up
+                  dac-top-apps dac-center"> 
+          <header class="devsite-landing-row-header"> 
+           <div class="devsite-landing-row-header-text"> 
+            <h2 id="trusted-by-the-top-apps"> Trusted by the top apps</h2> 
+           </div> 
+          </header> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-3-up
+                  dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+        devsite-landing-row-item-no-description
+    "> 
+            <div class="devsite-landing-row-item-media
+            "> 
+             <figure class="devsite-landing-row-item-image"> 
+              <img src="https://developer.android.com/images/jetpack/logos/beautyplus.png" srcset="https://developer.android.com/images/jetpack/logos/beautyplus_36.png 36w,https://developer.android.com/images/jetpack/logos/beautyplus_48.png 48w,https://developer.android.com/images/jetpack/logos/beautyplus_72.png 72w,https://developer.android.com/images/jetpack/logos/beautyplus_96.png 96w,https://developer.android.com/images/jetpack/logos/beautyplus_480.png 480w,https://developer.android.com/images/jetpack/logos/beautyplus_720.png 720w,https://developer.android.com/images/jetpack/logos/beautyplus_856.png 856w,https://developer.android.com/images/jetpack/logos/beautyplus_960.png 960w,https://developer.android.com/images/jetpack/logos/beautyplus_1440.png 1440w,https://developer.android.com/images/jetpack/logos/beautyplus_1920.png 1920w,https://developer.android.com/images/jetpack/logos/beautyplus_2880.png 2880w" sizes="(max-width: 840px) 50vw, 454px"> 
+             </figure> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+        devsite-landing-row-item-no-description
+    "> 
+            <div class="devsite-landing-row-item-media
+            "> 
+             <figure class="devsite-landing-row-item-image"> 
+              <img src="https://developer.android.com/images/jetpack/logos/deezer.png" srcset="https://developer.android.com/images/jetpack/logos/deezer_36.png 36w,https://developer.android.com/images/jetpack/logos/deezer_48.png 48w,https://developer.android.com/images/jetpack/logos/deezer_72.png 72w,https://developer.android.com/images/jetpack/logos/deezer_96.png 96w,https://developer.android.com/images/jetpack/logos/deezer_480.png 480w,https://developer.android.com/images/jetpack/logos/deezer_720.png 720w,https://developer.android.com/images/jetpack/logos/deezer_856.png 856w,https://developer.android.com/images/jetpack/logos/deezer_960.png 960w,https://developer.android.com/images/jetpack/logos/deezer_1440.png 1440w,https://developer.android.com/images/jetpack/logos/deezer_1920.png 1920w,https://developer.android.com/images/jetpack/logos/deezer_2880.png 2880w" sizes="(max-width: 840px) 50vw, 454px"> 
+             </figure> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+        devsite-landing-row-item-no-description
+    "> 
+            <div class="devsite-landing-row-item-media
+            "> 
+             <figure class="devsite-landing-row-item-image"> 
+              <img src="https://developer.android.com/images/jetpack/logos/hike.png" srcset="https://developer.android.com/images/jetpack/logos/hike_36.png 36w,https://developer.android.com/images/jetpack/logos/hike_48.png 48w,https://developer.android.com/images/jetpack/logos/hike_72.png 72w,https://developer.android.com/images/jetpack/logos/hike_96.png 96w,https://developer.android.com/images/jetpack/logos/hike_480.png 480w,https://developer.android.com/images/jetpack/logos/hike_720.png 720w,https://developer.android.com/images/jetpack/logos/hike_856.png 856w,https://developer.android.com/images/jetpack/logos/hike_960.png 960w,https://developer.android.com/images/jetpack/logos/hike_1440.png 1440w,https://developer.android.com/images/jetpack/logos/hike_1920.png 1920w,https://developer.android.com/images/jetpack/logos/hike_2880.png 2880w" sizes="(max-width: 840px) 50vw, 454px"> 
+             </figure> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-3-up
+                  dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+        devsite-landing-row-item-no-description
+    "> 
+            <div class="devsite-landing-row-item-media
+            "> 
+             <figure class="devsite-landing-row-item-image"> 
+              <img src="https://developer.android.com/images/jetpack/logos/iheartradio.png" srcset="https://developer.android.com/images/jetpack/logos/iheartradio_36.png 36w,https://developer.android.com/images/jetpack/logos/iheartradio_48.png 48w,https://developer.android.com/images/jetpack/logos/iheartradio_72.png 72w,https://developer.android.com/images/jetpack/logos/iheartradio_96.png 96w,https://developer.android.com/images/jetpack/logos/iheartradio_480.png 480w,https://developer.android.com/images/jetpack/logos/iheartradio_720.png 720w,https://developer.android.com/images/jetpack/logos/iheartradio_856.png 856w,https://developer.android.com/images/jetpack/logos/iheartradio_960.png 960w,https://developer.android.com/images/jetpack/logos/iheartradio_1440.png 1440w,https://developer.android.com/images/jetpack/logos/iheartradio_1920.png 1920w,https://developer.android.com/images/jetpack/logos/iheartradio_2880.png 2880w" sizes="(max-width: 840px) 50vw, 454px"> 
+             </figure> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+        devsite-landing-row-item-no-description
+    "> 
+            <div class="devsite-landing-row-item-media
+            "> 
+             <figure class="devsite-landing-row-item-image"> 
+              <img src="https://developer.android.com/images/jetpack/logos/kakao.png" srcset="https://developer.android.com/images/jetpack/logos/kakao_36.png 36w,https://developer.android.com/images/jetpack/logos/kakao_48.png 48w,https://developer.android.com/images/jetpack/logos/kakao_72.png 72w,https://developer.android.com/images/jetpack/logos/kakao_96.png 96w,https://developer.android.com/images/jetpack/logos/kakao_480.png 480w,https://developer.android.com/images/jetpack/logos/kakao_720.png 720w,https://developer.android.com/images/jetpack/logos/kakao_856.png 856w,https://developer.android.com/images/jetpack/logos/kakao_960.png 960w,https://developer.android.com/images/jetpack/logos/kakao_1440.png 1440w,https://developer.android.com/images/jetpack/logos/kakao_1920.png 1920w,https://developer.android.com/images/jetpack/logos/kakao_2880.png 2880w" sizes="(max-width: 840px) 50vw, 454px"> 
+             </figure> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+        devsite-landing-row-item-no-description
+    "> 
+            <div class="devsite-landing-row-item-media
+            "> 
+             <figure class="devsite-landing-row-item-image"> 
+              <img src="https://developer.android.com/images/jetpack/logos/linkedin.png" srcset="https://developer.android.com/images/jetpack/logos/linkedin_36.png 36w,https://developer.android.com/images/jetpack/logos/linkedin_48.png 48w,https://developer.android.com/images/jetpack/logos/linkedin_72.png 72w,https://developer.android.com/images/jetpack/logos/linkedin_96.png 96w,https://developer.android.com/images/jetpack/logos/linkedin_480.png 480w,https://developer.android.com/images/jetpack/logos/linkedin_720.png 720w,https://developer.android.com/images/jetpack/logos/linkedin_856.png 856w,https://developer.android.com/images/jetpack/logos/linkedin_960.png 960w,https://developer.android.com/images/jetpack/logos/linkedin_1440.png 1440w,https://developer.android.com/images/jetpack/logos/linkedin_1920.png 1920w,https://developer.android.com/images/jetpack/logos/linkedin_2880.png 2880w" sizes="(max-width: 840px) 50vw, 454px"> 
+             </figure> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-3-up
+                  dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+        devsite-landing-row-item-no-description
+    "> 
+            <div class="devsite-landing-row-item-media
+            "> 
+             <figure class="devsite-landing-row-item-image"> 
+              <img src="https://developer.android.com/images/jetpack/logos/new-york-times.png" srcset="https://developer.android.com/images/jetpack/logos/new-york-times_36.png 36w,https://developer.android.com/images/jetpack/logos/new-york-times_48.png 48w,https://developer.android.com/images/jetpack/logos/new-york-times_72.png 72w,https://developer.android.com/images/jetpack/logos/new-york-times_96.png 96w,https://developer.android.com/images/jetpack/logos/new-york-times_480.png 480w,https://developer.android.com/images/jetpack/logos/new-york-times_720.png 720w,https://developer.android.com/images/jetpack/logos/new-york-times_856.png 856w,https://developer.android.com/images/jetpack/logos/new-york-times_960.png 960w,https://developer.android.com/images/jetpack/logos/new-york-times_1440.png 1440w,https://developer.android.com/images/jetpack/logos/new-york-times_1920.png 1920w,https://developer.android.com/images/jetpack/logos/new-york-times_2880.png 2880w" sizes="(max-width: 840px) 50vw, 454px"> 
+             </figure> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+        devsite-landing-row-item-no-description
+    "> 
+            <div class="devsite-landing-row-item-media
+            "> 
+             <figure class="devsite-landing-row-item-image"> 
+              <img src="https://developer.android.com/images/jetpack/logos/strava.png" srcset="https://developer.android.com/images/jetpack/logos/strava_36.png 36w,https://developer.android.com/images/jetpack/logos/strava_48.png 48w,https://developer.android.com/images/jetpack/logos/strava_72.png 72w,https://developer.android.com/images/jetpack/logos/strava_96.png 96w,https://developer.android.com/images/jetpack/logos/strava_480.png 480w,https://developer.android.com/images/jetpack/logos/strava_720.png 720w,https://developer.android.com/images/jetpack/logos/strava_856.png 856w,https://developer.android.com/images/jetpack/logos/strava_960.png 960w,https://developer.android.com/images/jetpack/logos/strava_1440.png 1440w,https://developer.android.com/images/jetpack/logos/strava_1920.png 1920w,https://developer.android.com/images/jetpack/logos/strava_2880.png 2880w" sizes="(max-width: 840px) 50vw, 454px"> 
+             </figure> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+        devsite-landing-row-item-no-description
+    "> 
+            <div class="devsite-landing-row-item-media
+            "> 
+             <figure class="devsite-landing-row-item-image"> 
+              <img src="https://developer.android.com/images/jetpack/logos/tinder.png" srcset="https://developer.android.com/images/jetpack/logos/tinder_36.png 36w,https://developer.android.com/images/jetpack/logos/tinder_48.png 48w,https://developer.android.com/images/jetpack/logos/tinder_72.png 72w,https://developer.android.com/images/jetpack/logos/tinder_96.png 96w,https://developer.android.com/images/jetpack/logos/tinder_480.png 480w,https://developer.android.com/images/jetpack/logos/tinder_720.png 720w,https://developer.android.com/images/jetpack/logos/tinder_856.png 856w,https://developer.android.com/images/jetpack/logos/tinder_960.png 960w,https://developer.android.com/images/jetpack/logos/tinder_1440.png 1440w,https://developer.android.com/images/jetpack/logos/tinder_1920.png 1920w,https://developer.android.com/images/jetpack/logos/tinder_2880.png 2880w" sizes="(max-width: 840px) 50vw, 454px"> 
+             </figure> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-2-up
+                  dac-row-logos devsite-landing-row-logos devsite-landing-row-no-image-background"> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+        devsite-landing-row-item-no-description
+    "> 
+            <div class="devsite-landing-row-item-media
+            "> 
+             <figure class="devsite-landing-row-item-image"> 
+              <img src="https://developer.android.com/images/jetpack/logos/traveloka.png" srcset="https://developer.android.com/images/jetpack/logos/traveloka_36.png 36w,https://developer.android.com/images/jetpack/logos/traveloka_48.png 48w,https://developer.android.com/images/jetpack/logos/traveloka_72.png 72w,https://developer.android.com/images/jetpack/logos/traveloka_96.png 96w,https://developer.android.com/images/jetpack/logos/traveloka_480.png 480w,https://developer.android.com/images/jetpack/logos/traveloka_720.png 720w,https://developer.android.com/images/jetpack/logos/traveloka_856.png 856w,https://developer.android.com/images/jetpack/logos/traveloka_960.png 960w,https://developer.android.com/images/jetpack/logos/traveloka_1440.png 1440w,https://developer.android.com/images/jetpack/logos/traveloka_1920.png 1920w,https://developer.android.com/images/jetpack/logos/traveloka_2880.png 2880w" sizes="(max-width: 600px) 100vw, (max-width: 840px) 50vw, 700px"> 
+             </figure> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+        devsite-landing-row-item-no-description
+    "> 
+            <div class="devsite-landing-row-item-media
+            "> 
+             <figure class="devsite-landing-row-item-image"> 
+              <img src="https://developer.android.com/images/jetpack/logos/zillow.png" srcset="https://developer.android.com/images/jetpack/logos/zillow_36.png 36w,https://developer.android.com/images/jetpack/logos/zillow_48.png 48w,https://developer.android.com/images/jetpack/logos/zillow_72.png 72w,https://developer.android.com/images/jetpack/logos/zillow_96.png 96w,https://developer.android.com/images/jetpack/logos/zillow_480.png 480w,https://developer.android.com/images/jetpack/logos/zillow_720.png 720w,https://developer.android.com/images/jetpack/logos/zillow_856.png 856w,https://developer.android.com/images/jetpack/logos/zillow_960.png 960w,https://developer.android.com/images/jetpack/logos/zillow_1440.png 1440w,https://developer.android.com/images/jetpack/logos/zillow_1920.png 1920w,https://developer.android.com/images/jetpack/logos/zillow_2880.png 2880w" sizes="(max-width: 600px) 100vw, (max-width: 840px) 50vw, 700px"> 
+             </figure> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-1-up
+                  dac-center dac-get-involved"> 
+          <header class="devsite-landing-row-header"> 
+           <div class="devsite-landing-row-header-text"> 
+            <h2 id="get-involved-with-the-android-jetpack-community"> Get involved with the Android Jetpack community</h2> 
+            <div class="devsite-landing-row-description"> 
+             <nav class="dac-footer-promos"> 
+              <ul class="devsite-footer-promos-list"> 
+               <li class="devsite-footer-promo"> <a href="https://stackoverflow.com/questions/tagged/android-jetpack" class="devsite-footer-promo-title"> <img class="devsite-footer-promo-icon" src="https://developer.android.com/images/jetpack/icons/stackoverflow.svg"> StackOverflow </a> 
+                <div class="devsite-footer-promo-description">
+                 Ask a question on StackOverflow
+                </div> </li> 
+               <li class="devsite-footer-promo"> <a href="https://issuetracker.google.com/" class="devsite-footer-promo-title"> <img class="devsite-footer-promo-icon" src="https://developer.android.com/images/jetpack/icons/issue-tracker.svg"> Issue Tracker </a> 
+                <div class="devsite-footer-promo-description">
+                 Report an issue
+                </div> </li> 
+               <li class="devsite-footer-promo"> <a href="https://android-developers.googleblog.com/search/label/Jetpack" class="devsite-footer-promo-title"> <img class="devsite-footer-promo-icon" src="https://developer.android.com/images/jetpack/icons/android-developers-blog.svg"> Android Developers Blog </a> 
+                <div class="devsite-footer-promo-description">
+                 Read about Android Jetpack
+                </div> </li> 
+              </ul> 
+             </nav> 
+            </div> 
+           </div> 
+          </header> 
+         </section> 
+        </div> 
+       </article> 
+      </article> 
+     </devsite-content> 
+    </div> 
+    <devsite-footer-promos ds-is="footer-promos" class="devsite-footer"> 
+     <nav> 
+      <ul class="devsite-footer-promos-list"> 
+       <li class="devsite-footer-promo"> <a href="//twitter.com/AndroidDev" class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Twitter Promo"> <img class="devsite-footer-promo-icon" src="https://developer.android.com/_static/android/images/logo-twitter.svg" alt="Twitter"> Twitter </a> 
+        <div class="devsite-footer-promo-description">
+         Follow @AndroidDev on Twitter
+        </div> </li> 
+       <li class="devsite-footer-promo"> <a href="//www.youtube.com/user/androiddevelopers" class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer YouTube Promo"> <img class="devsite-footer-promo-icon" src="//www.gstatic.com/images/icons/material/product/2x/youtube_48dp.png" alt="YouTube"> YouTube </a> 
+        <div class="devsite-footer-promo-description">
+         Check out Android Developers on YouTube
+        </div> </li> 
+      </ul> 
+     </nav> 
+    </devsite-footer-promos> 
+    <devsite-footer-linkboxes ds-is="footer-linkboxes" class="devsite-footer"> 
+     <nav class="devsite-footer-linkboxes nocontent"> 
+      <ul class="devsite-footer-linkboxes-list"> 
+       <li class="devsite-footer-linkbox "> <h3 class="devsite-footer-linkbox-heading">More Android</h3> 
+        <ul class="devsite-footer-linkbox-list"> 
+         <li class="devsite-footer-linkbox-item"> <a href="//www.android.com" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 1)"> Android </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="//www.android.com/enterprise/" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 2)"> Enterprise </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="//www.android.com/security-center/" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 3)"> Security </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="//source.android.com" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 4)"> Source </a> </li> 
+        </ul> </li> 
+       <li class="devsite-footer-linkbox "> <h3 class="devsite-footer-linkbox-heading">Support</h3> 
+        <ul class="devsite-footer-linkbox-list"> 
+         <li class="devsite-footer-linkbox-item"> <a href="//issuetracker.google.com/issues/new?component=190923&amp;template=841312" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 1)"> Report platform bug </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="//issuetracker.google.com/issues/new?component=192697" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 2)"> Report documentation bug </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="//support.google.com/googleplay/android-developer" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 3)"> Google Play support </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="//docs.google.com/forms/d/e/1FAIpQLSf27XIxoFmNpTjTYdk-m1uKWGqEnd7_4C_E1AD5fdCfyTBWNA/viewform?usp=pp_url&amp;entry.1909689089&amp;entry.208743710&amp;entry.408796755&amp;entry.1341430893&amp;entry.594931249&amp;entry.1640656812&amp;entry.1759804042&amp;entry.1441312344=developer.android.com" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 4)"> Join user studies </a> </li> 
+        </ul> </li> 
+       <li class="devsite-footer-linkbox "> <h3 class="devsite-footer-linkbox-heading">Documentation</h3> 
+        <ul class="devsite-footer-linkbox-list"> 
+         <li class="devsite-footer-linkbox-item"> <a href="/guide" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 1)"> Developer guides </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="/design" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 2)"> Design guides </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="/reference" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 3)"> API reference </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="/samples" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 4)"> Samples </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="/studio/intro" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 5)"> Android Studio </a> </li> 
+        </ul> </li> 
+      </ul> 
+     </nav> 
+    </devsite-footer-linkboxes> 
+    <devsite-footer-utility ds-is="footer-utility" class="devsite-footer"> 
+     <div class="devsite-footer-utility"> 
+      <nav class="devsite-nav devsite-footer-sites"> 
+       <a href="https://developers.google.com/" class="devsite-footer-sites-logo-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Google Developers Link"> <img class="devsite-footer-sites-logo" src="https://developer.android.com/_static/images/lockup-color.png" alt="Google Developers"> </a> 
+       <ul class="devsite-footer-sites-list"> 
+        <li class="devsite-footer-sites-item"> <a href="//developer.android.com" class="devsite-footer-sites-link
+                  gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Android Link"> Android </a> </li> 
+        <li class="devsite-footer-sites-item"> <a href="//developer.chrome.com/home" class="devsite-footer-sites-link
+                  gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Chrome Link"> Chrome </a> </li> 
+        <li class="devsite-footer-sites-item"> <a href="//firebase.google.com" class="devsite-footer-sites-link
+                  gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Firebase Link"> Firebase </a> </li> 
+        <li class="devsite-footer-sites-item"> <a href="//cloud.google.com" class="devsite-footer-sites-link
+                  gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Google Cloud Platform Link"> Google Cloud Platform </a> </li> 
+        <li class="devsite-footer-sites-item"> <a href="//developers.google.com/products/" class="devsite-footer-sites-link
+                  gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer All products Link"> All products </a> </li> 
+       </ul> 
+      </nav> 
+      <nav class="devsite-nav"> 
+       <ul class="devsite-footer-utility-list"> 
+        <li class="devsite-footer-utility-item
+                 "> <a class="devsite-footer-utility-link
+                  gc-analytics-event" href="//policies.google.com/privacy" data-category="Site-Wide Custom Events" data-label="Footer Privacy link"> Privacy </a> </li> 
+        <li class="devsite-footer-utility-item
+                 "> <a class="devsite-footer-utility-link
+                  gc-analytics-event" href="https://developer.android.com/license" data-category="Site-Wide Custom Events" data-label="Footer License link"> License </a> </li> 
+        <li class="devsite-footer-utility-item
+                 "> <a class="devsite-footer-utility-link
+                  gc-analytics-event" href="https://developer.android.com/distribute/marketing-tools/brand-guidelines" data-category="Site-Wide Custom Events" data-label="Footer Brand guidelines link"> Brand guidelines </a> </li> 
+        <li class="devsite-footer-utility-item
+                 devsite-footer-utility-button"> <span class="devsite-footer-utility-description">Get news and tips by email</span> <a class="devsite-footer-utility-link
+                  gc-analytics-event" href="https://developer.android.com/newsletter/#subscribe" data-category="Site-Wide Custom Events" data-label="Footer Subscribe link"> Subscribe </a> </li> 
+       </ul> 
+       <form class="devsite-footer-utility-language"> 
+        <select class="devsite-footer-utility-language-select" name="language" track-name="click" track-type="languageSelector"> <option value="id" track-metadata-original-language="en" track-metadata-selected-language="id" track-name="changed" track-type="languageSelector"> Bahasa Indonesia </option> <option value="de" track-metadata-original-language="en" track-metadata-selected-language="de" track-name="changed" track-type="languageSelector"> Deutsch </option> <option value="en" track-metadata-original-language="en" track-metadata-selected-language="en" track-name="changed" track-type="languageSelector" selected> English </option> <option value="es" track-metadata-original-language="en" track-metadata-selected-language="es" track-name="changed" track-type="languageSelector"> Español </option> <option value="es_419" track-metadata-original-language="en" track-metadata-selected-language="es_419" track-name="changed" track-type="languageSelector"> Español (América Latina) </option> <option value="pt_br" track-metadata-original-language="en" track-metadata-selected-language="pt_br" track-name="changed" track-type="languageSelector"> Português Brasileiro </option> <option value="vi" track-metadata-original-language="en" track-metadata-selected-language="vi" track-name="changed" track-type="languageSelector"> Tiếng Việt </option> <option value="tr" track-metadata-original-language="en" track-metadata-selected-language="tr" track-name="changed" track-type="languageSelector"> Türkçe </option> <option value="fr" track-metadata-original-language="en" track-metadata-selected-language="fr" track-name="changed" track-type="languageSelector"> français </option> <option value="ru" track-metadata-original-language="en" track-metadata-selected-language="ru" track-name="changed" track-type="languageSelector"> Русский </option> <option value="th" track-metadata-original-language="en" track-metadata-selected-language="th" track-name="changed" track-type="languageSelector"> ภาษาไทย </option> <option value="ja" track-metadata-original-language="en" track-metadata-selected-language="ja" track-name="changed" track-type="languageSelector"> 日本語 </option> <option value="zh_cn" track-metadata-original-language="en" track-metadata-selected-language="zh_cn" track-name="changed" track-type="languageSelector"> 简体中文 </option> <option value="zh_tw" track-metadata-original-language="en" track-metadata-selected-language="zh_tw" track-name="changed" track-type="languageSelector"> 繁體中文 </option> <option value="ko" track-metadata-original-language="en" track-metadata-selected-language="ko" track-name="changed" track-type="languageSelector"> 한국어 </option> </select> 
+       </form> 
+      </nav> 
+     </div> 
+    </devsite-footer-utility> 
+   </div>
+  </div> 
+  <devsite-sitemask ds-is="site-mask"></devsite-sitemask> 
+  <devsite-snackbar ds-is="snackbar"></devsite-snackbar> 
+  <devsite-tooltip ds-is="tooltip"></devsite-tooltip> 
+  <devsite-analytics ds-is="analytics"> 
+   <script type="application/json" analytics>[{"metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}, "dimensions": {"dimension6": "en", "dimension4": "Android Developers", "dimension5": "en", "dimension3": false, "dimension1": "Signed out"}, "gaid": "UA-5831155-1"}, {"metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}, "dimensions": {"dimension6": "en", "dimension4": "Android Developers", "dimension5": "en", "dimension3": false, "dimension1": "Signed out"}, "gaid": "UA-49880327-2"}]</script> 
+   <script type="application/json" gtm>["GTM-KMSWPCJ"]</script> 
+  </devsite-analytics> 
+  <script>
+    (function(d,e,v,E,l,o,p,r,s,_,__){d['GoogleDevelopersObject']=[!0,l,o,p,r,s];
+    _=e.createElement(v);_.async=1;_.src=E;__=e.getElementsByTagName(v)[0];
+    __.parentNode.insertBefore(_,__);})(window, document, 'script',
+      'https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/js/app_loader.js',
+      'en',
+      'https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/js/devsite_app.js',
+      'https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android',
+      !0,
+      ['/_pwa/android/manifest.json',
+       '/_static/images/video-placeholder.svg',
+       'https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/images/favicon.png','https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/images/lockup.svg','https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons'],
+       'https://android-dot-devsite-v2-prod.appspot.com')
+   </script>  
+ </body>
+</html>

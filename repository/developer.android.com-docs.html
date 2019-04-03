@@ -1,0 +1,963 @@
+<!doctype html>
+<html lang="en">
+ <head> 
+  <title>Documentation</title> 
+  <meta property="og:title" content="Documentation"> 
+  <meta name="description" content="<!-- hide description -->"> 
+  <meta property="og:description" content="<!-- hide description -->"> 
+  <meta property="og:url" content="https://developer.android.com/docs"> 
+  <meta property="og:locale" content="en"> 
+  <meta property="og:site_name" content="Android Developers"> 
+  <meta property="og:type" content="website"> 
+  <meta name="theme-color" content="#78c257"> 
+  <meta charset="utf-8"> 
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link rel="manifest" href="/_pwa/android/manifest.json"> 
+  <link rel="preconnect" href="//www.gstatic.com" crossorigin> 
+  <link rel="preconnect" href="//fonts.gstatic.com" crossorigin> 
+  <link rel="preconnect" href="//fonts.googleapis.com" crossorigin> 
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"> 
+  <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/css/app.css"> 
+  <noscript> 
+   <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/css/ce_bundle.css"> 
+  </noscript> 
+  <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/images/favicon.png"> 
+  <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/images/touchicon-180.png">
+  <link rel="canonical" href="https://developer.android.com/docs">
+  <link rel="search" type="application/opensearchdescription+xml" title="Android Developers" href="https://developer.android.com/s/opensearch.xml">
+ </head> 
+ <body type="landing" theme="android-theme" class="dac-landing-page dac-docs-overview-page" layout="full" pending> 
+  <devsite-progress type="indeterminate" id="app-progress"></devsite-progress> 
+  <div class="devsite-wrapper">
+   <devsite-header ds-is="header"> 
+    <div class="devsite-header--inner"> 
+     <div class="devsite-top-logo-row-wrapper-wrapper"> 
+      <div class="devsite-top-logo-row-wrapper"> 
+       <div class="devsite-top-logo-row"> 
+        <button type="button" id="devsite-hamburger-menu" class="devsite-header-icon-button button-flat material-icons gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Navigation menu button" visually-hidden aria-label="Close menu"> </button> 
+        <div class="devsite-product-name-wrapper"> 
+         <a href="https://developer.android.com/" class="devsite-site-logo-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Site logo"> <img src="https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/images/lockup.svg" class="devsite-site-logo" alt="Android Developers"> </a> 
+         <span class="devsite-product-name"> 
+          <ul class="devsite-breadcrumb-list"> 
+           <li class="devsite-breadcrumb-item"> </li> 
+          </ul> </span> 
+        </div> 
+        <div class="devsite-top-logo-row-middle"> 
+         <div class="devsite-header-upper-tabs"> 
+          <devsite-tabs ds-is="tabs" class="upper-tabs"> 
+           <div class="devsite-tabs-wrapper"> 
+            <tab> 
+             <a href="https://developer.android.com/about" class="gc-analytics-event" title="Platform" data-category="Site-Wide Custom Events" data-label="Tab: Platform"> Platform </a> 
+            </tab> 
+            <tab> 
+             <a href="https://developer.android.com/studio" class="gc-analytics-event" title="Android Studio" data-category="Site-Wide Custom Events" data-label="Tab: Android Studio"> Android Studio </a> 
+            </tab> 
+            <tab> 
+             <a href="https://developer.android.com/distribute" class="gc-analytics-event" title="Google Play" data-category="Site-Wide Custom Events" data-label="Tab: Google Play"> Google Play </a> 
+            </tab> 
+            <tab> 
+             <a href="https://developer.android.com/jetpack" class="gc-analytics-event" title="Android Jetpack" data-category="Site-Wide Custom Events" data-label="Tab: Android Jetpack"> Android Jetpack </a> 
+            </tab> 
+            <tab active> 
+             <a href="https://developer.android.com/docs" class="gc-analytics-event" title="Docs" aria-label="Docs, selected" data-category="Site-Wide Custom Events" data-label="Tab: Docs"> Docs </a> 
+            </tab> 
+            <tab> 
+             <a href="https://developer.android.com/news" class="gc-analytics-event" title="News" data-category="Site-Wide Custom Events" data-label="Tab: News"> News </a> 
+            </tab> 
+           </div> 
+          </devsite-tabs> 
+         </div> 
+         <devsite-search ds-is="search" enable-search enable-signin enable-suggestions enable-query-completion project-path=""> 
+          <form class="devsite-search-form" action="https://developer.android.com/s/results/" method="GET"> 
+           <div class="devsite-search-container"> 
+            <div id="searchbox" class="devsite-searchbox"> 
+             <input placeholder="Search" type="text" class="devsite-search-field devsite-search-query" name="q" value="" autocomplete="off" aria-label="Search box"> 
+             <div class="devsite-search-image material-icons"></div> 
+            </div> 
+            <button type="button" search-open class="devsite-search-button devsite-header-icon-button button-flat material-icons" aria-label="Open search box"></button> 
+           </div> 
+          </form> 
+          <button type="button" search-close class="devsite-search-button devsite-header-icon-button button-flat material-icons" aria-label="Close search box"></button> 
+         </devsite-search> 
+        </div> 
+        <devsite-user ds-is="user"></devsite-user> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="devsite-collapsible-section
+    "> 
+      <div class="devsite-header-background"> 
+       <div class="devsite-product-id-row"> 
+        <div class="devsite-product-description-row"> 
+         <ul class="devsite-breadcrumb-list"> 
+          <li class="devsite-breadcrumb-item"> <a href="https://developer.android.com/docs" class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Lower Header" data-value="1"> Documentation </a> </li> 
+         </ul> 
+         <div class="devsite-product-description">
+          <!-- hide description -->
+         </div> 
+        </div> 
+       </div> 
+       <div class="devsite-doc-set-nav-row"> 
+        <devsite-tabs ds-is="tabs" class="lower-tabs"> 
+         <div class="devsite-tabs-wrapper"> 
+          <tab active> 
+           <a href="https://developer.android.com/docs" class="gc-analytics-event" title="Overview" aria-label="Overview, selected" data-category="Site-Wide Custom Events" data-label="Tab: Overview"> Overview </a> 
+          </tab> 
+          <tab> 
+           <a href="https://developer.android.com/guide" class="gc-analytics-event" title="Guides" data-category="Site-Wide Custom Events" data-label="Tab: Guides"> Guides </a> 
+          </tab> 
+          <tab> 
+           <a href="https://developer.android.com/reference" class="gc-analytics-event" title="Reference" data-category="Site-Wide Custom Events" data-label="Tab: Reference"> Reference </a> 
+          </tab> 
+          <tab> 
+           <a href="https://developer.android.com/samples" class="gc-analytics-event" title="Samples" data-category="Site-Wide Custom Events" data-label="Tab: Samples"> Samples </a> 
+          </tab> 
+          <tab> 
+           <a href="https://developer.android.com/design" class="gc-analytics-event" title="Design &amp; Quality" data-category="Site-Wide Custom Events" data-label="Tab: Design &amp; Quality"> Design &amp; Quality </a> 
+          </tab> 
+         </div> 
+        </devsite-tabs> 
+       </div> 
+      </div> 
+     </div>
+    </div> 
+   </devsite-header> 
+   <devsite-book-nav ds-is="book-nav" scrollbars hidden> 
+    <nav class="devsite-book-nav devsite-nav nocontent"> 
+     <div class="devsite-mobile-header"> 
+      <button type="button" id="devsite-close-nav" class="devsite-header-icon-button button-flat material-icons gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Close navigation" aria-label="Close navigation"> </button> 
+     </div> 
+     <div class="devsite-book-nav-wrapper"> 
+      <div class="devsite-mobile-nav-top"> 
+       <ul class="devsite-nav-list"> 
+        <li class="devsite-nav-item"> <a href="/about" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Platform"> <span class="devsite-nav-text">Platform</span> </a> </li> 
+        <li class="devsite-nav-item"> <a href="/studio" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Android Studio"> <span class="devsite-nav-text">Android Studio</span> </a> </li> 
+        <li class="devsite-nav-item"> <a href="/distribute" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Google Play"> <span class="devsite-nav-text">Google Play</span> </a> </li> 
+        <li class="devsite-nav-item"> <a href="/jetpack" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Android Jetpack"> <span class="devsite-nav-text">Android Jetpack</span> </a> </li> 
+        <li class="devsite-nav-item"> <a href="/docs" class="devsite-nav-title gc-analytics-event
+            devsite-nav-active" data-category="Site-Wide Custom Events" data-label="Responsive Tab: Docs"> <span class="devsite-nav-text">Docs</span> </a> 
+         <ul class="devsite-nav-responsive-tabs"> 
+          <li class="devsite-nav-item"> <a href="/docs" class="devsite-nav-title gc-analytics-event
+            devsite-nav-active" data-category="Site-Wide Custom Events" data-label="Responsive Tab: Overview"> <span class="devsite-nav-text">Overview</span> </a> </li> 
+          <li class="devsite-nav-item"> <a href="/guide" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Guides"> <span class="devsite-nav-text">Guides</span> </a> </li> 
+          <li class="devsite-nav-item"> <a href="/reference" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Reference"> <span class="devsite-nav-text">Reference</span> </a> </li> 
+          <li class="devsite-nav-item"> <a href="/samples" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Samples"> <span class="devsite-nav-text">Samples</span> </a> </li> 
+          <li class="devsite-nav-item"> <a href="/design" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Design &amp; Quality"> <span class="devsite-nav-text">Design &amp; Quality</span> </a> </li> 
+         </ul> </li> 
+        <li class="devsite-nav-item"> <a href="/news" class="devsite-nav-title gc-analytics-event
+            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: News"> <span class="devsite-nav-text">News</span> </a> </li> 
+       </ul> 
+      </div> 
+     </div> 
+    </nav> 
+   </devsite-book-nav> 
+   <div id="gc-wrapper"> 
+    <div class="devsite-main-content"> 
+     <devsite-toc ds-is="toc" class="devsite-nav" hidden></devsite-toc> 
+     <devsite-content ds-is="content"> 
+      <article class="devsite-article"> 
+       <article class="devsite-article-inner"> 
+        <div class="devsite-article-meta"> 
+         <ul class="devsite-breadcrumb-list"> 
+          <li class="devsite-breadcrumb-item"> <a href="https://developer.android.com/" class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="1"> Android Developers </a> </li> 
+          <li class="devsite-breadcrumb-item"> 
+           <div class="devsite-breadcrumb-guillemet material-icons"></div> <a href="https://developer.android.com/docs" class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="2"> Docs </a> </li> 
+          <li class="devsite-breadcrumb-item"> 
+           <div class="devsite-breadcrumb-guillemet material-icons"></div> <a href="https://developer.android.com/docs" class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="3"> Overview </a> </li> 
+         </ul> 
+        </div> 
+        <devsite-toc ds-is="toc" class="devsite-nav" devsite-toc-embedded hidden></devsite-toc> 
+        <div class="devsite-article-body clearfix
+      "> 
+         <meta name="description" content="Whether you're building for Android handsets, Wear OS by Google, Android TV, Android Auto, or Android Things, this section provides the guides and API reference you need.
+"> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-1-up
+                  "> 
+          <div class="dac-landing-row-hero"> 
+           <h1 style="padding: 0">Documentation for <wbr>app developers</h1> 
+           <div class="dac-landing-row-hero-description"> 
+            <p>Whether you're building for Android handsets, Wear OS by Google, Android TV, Android Auto, or Android Things, this section provides the guides and API reference you need.</p> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-2-up
+                  dac-grow-column-4-8"> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-column"> 
+            <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-landing-row-bg-blue dac-landing-row-item-invert dac-full-height dac-heading-small dac-guides-flex-columns-xs"> 
+             <div class="devsite-landing-row-item-description"> 
+              <div class="devsite-landing-row-item-body"> 
+               <a href="https://developer.android.com/guide/"> <h3 id="get-started"> Get started</h3> </a> 
+               <div class="devsite-landing-row-item-description-content"> 
+                <div class="dac-guides"> 
+                 <div class="dac-guides-group"> 
+                  <h4><a href="https://developer.android.com/training/basics/firstapp/">Build your first app</a></h4> 
+                 </div> 
+                 <div class="dac-guides-group"> 
+                  <h4><a href="https://developer.android.com/samples/">Sample code</a></h4> 
+                 </div> 
+                 <div class="dac-guides-group"> 
+                  <h4><a href="https://developer.android.com/reference/">API reference</a></h4> 
+                 </div> 
+                 <div class="dac-guides-group"> 
+                  <h4><a href="https://developer.android.com/design/">Design guidelines</a></h4> 
+                 </div> 
+                 <div class="dac-guides-group"> 
+                  <h4><a href="https://codelabs.developers.google.com/?cat=Android" class="external">Codelab tutorials</a></h4> 
+                 </div> 
+                 <div class="dac-guides-group"> 
+                  <h4><a href="https://developers.google.com/training/android/" class="external">Training courses</a></h4> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-column"> 
+            <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-heading-small dac-guides-flex-columns" background="grey"> 
+             <div class="devsite-landing-row-item-description"> 
+              <div class="devsite-landing-row-item-body"> 
+               <a href="https://developer.android.com/guide/"> <h3 id="android-devices"> Android devices</h3> </a> 
+               <div class="devsite-landing-row-item-description-content"> 
+                <div class="dac-guides"> 
+                 <div class="dac-guides-group"> 
+                  <h4><a href="https://developer.android.com/training/wearables/">Wear OS</a></h4> 
+                 </div> 
+                 <div class="dac-guides-group"> 
+                  <h4><a href="https://developer.android.com/training/tv/">Android TV</a></h4> 
+                 </div> 
+                 <div class="dac-guides-group"> 
+                  <h4><a href="https://developer.android.com/training/auto/">Android Auto</a></h4> 
+                 </div> 
+                 <div class="dac-guides-group"> 
+                  <h4><a href="https://developer.android.com/things/get-started/">Android Things</a></h4> 
+                 </div> 
+                 <div class="dac-guides-group"> 
+                  <h4><a href="https://developer.android.com/chrome-os/intro">Chrome OS Devices</a></h4> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+            <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-heading-small dac-guides-flex-columns" background="grey"> 
+             <div class="devsite-landing-row-item-description"> 
+              <div class="devsite-landing-row-item-body"> 
+               <a href="https://developer.android.com/guide/"> <h3 id="best-practices"> Best practices</h3> </a> 
+               <div class="devsite-landing-row-item-description-content"> 
+                <div class="dac-guides"> 
+                 <div class="dac-guides-group"> 
+                  <h4><a href="https://developer.android.com/training/testing/">Testing</a></h4> 
+                 </div> 
+                 <div class="dac-guides-group"> 
+                  <h4><a href="https://developer.android.com/topic/performance/">Performance</a></h4> 
+                 </div> 
+                 <div class="dac-guides-group"> 
+                  <h4><a href="https://developer.android.com/guide/topics/ui/accessibility/">Accessibility</a></h4> 
+                 </div> 
+                 <div class="dac-guides-group"> 
+                  <h4><a href="https://developer.android.com/topic/security/best-practices">Security</a></h4> 
+                 </div> 
+                 <div class="dac-guides-group"> 
+                  <h4><a href="https://developer.android.com/work/overview">Enterprise</a></h4> 
+                 </div> 
+                 <div class="dac-guides-group"> 
+                  <h4><a href="https://developer.android.com/topic/billions/">Emerging markets</a></h4> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-2-up
+                  "> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-grow-3 dac-heading-small dac-guides-flex-columns
+" background="grey"> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <a href="https://developer.android.com/guide/"> <h3 id="core-developer-topics"> Core developer topics</h3> </a> 
+              <div class="devsite-landing-row-item-description-content"> 
+               <div class="dac-guides"> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/guide/components/activities/">Activities</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/guide/components/intents-filters">Intents and Intent Filters</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/guide/topics/ui/">UI &amp; Navigation</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/training/animation/">Animations &amp; Transitions</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/guide/topics/graphics/">Images &amp; Graphics</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/guide/topics/media/">Audio &amp; Video</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/training/best-background">Background Tasks</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/guide/topics/data/">App Data &amp; Files</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/guide/user-data/">User Data &amp; Identity</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/training/location/">User Location</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/guide/input/">Touch &amp; Input</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/training/camera/">Camera</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/guide/topics/sensors/">Sensors</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/guide/topics/connectivity/">Connectivity</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/guide/topics/renderscript/">Renderscript</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/guide/webapps/">Web-Based Content</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/topic/instant-apps/">Instant Apps</a></h4> 
+                </div> 
+               </div> 
+              </div> 
+              <div class="devsite-landing-row-item-buttons"> 
+               <a href="https://developer.android.com/guide" class="button dac-button dac-flat-button"> See all developer guides </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-landing-row-bg-slate dac-landing-row-item-invert dac-landing-row-bg-blob-5 dac-heading-small dac-landing-row-item-empty
+"> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <a href="https://developer.android.com/design/"> <h3 id="design-guides"> Design guides</h3> </a> 
+              <div class="devsite-landing-row-item-description-content"> 
+               <div class="dac-guides"> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/design/">Material design</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/develop/quality-guidelines/core-app-quality">Core app quality</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/docs/quality-guidelines/tablet-app-quality">Tablet app quality</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/docs/quality-guidelines/wear-app-quality">Wear app quality</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/docs/quality-guidelines/tv-app-quality">TV app quality</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/docs/quality-guidelines/auto-app-quality">Auto app quality</a></h4> 
+                </div> 
+               </div> 
+               <div class="devsite-landing-row-item-buttons"> 
+                <a href="https://developer.android.com/design" class="button dac-button dac-flat-button"> See more </a> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div>
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-2-up
+                  "> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-grow-3 dac-heading-small dac-guides-flex-columns
+" background="grey"> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <a href="https://developer.android.com/guide/"> <h3 id="more-documentation"> More documentation</h3> </a> 
+              <div class="devsite-landing-row-item-description-content"> 
+               <div class="dac-guides"> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/ndk/guides/">Android NDK</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/kotlin/">Kotlin</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/studio/intro/">Android Studio</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/google/">Google Play Services</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/distribute/console/">Google Play Console</a></h4> 
+                </div> 
+                <div class="dac-guides-group"> 
+                 <h4><a href="https://developer.android.com/about/">Android Releases</a></h4> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+        devsite-landing-row-item-no-description
+    "> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-1-up
+                  dac-gutter" background="grey"> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+      "> 
+            <style>
+  label {
+    font-size: inherit;
+  }
+</style> 
+            <div class="dac-subtitle dac-center"> 
+             <h3>Samples</h3> 
+             <form method="get" action="/samples" class="dac-samples-form"> 
+              <label class="inline"> Find samples related to: <select name="technology"> <option value="">Android</option> <option value="android auto">Android Auto</option> <option value="android tv">Android TV</option> <option value="android wear">Android Wear</option> <option value="firebase">Firebase</option> <option value="google cast">Google Cast</option> <option value="google mobile ads">Google Mobile Ads</option> <option value="google play in-app billing">Google Play In-App Billing</option> <option value="google play services">Google Play Services</option> <option value="ndk">NDK</option> </select> </label> 
+              <button type="submit" class="button dac-button dac-submit-button">See samples</button> 
+             </form> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-2-up
+                  dac-grow-column-4-8 dac-column-switch dac-gutter" background="grey"> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-column"> 
+            <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-landing-row dac-landing-row-item dac-illustration dac-illustration-keyline-3 dac-full-height dac-illustration-column dac-heading-linked
+" background="white"> 
+             <div class="devsite-landing-row-item-description"> 
+              <div class="devsite-landing-row-item-body"> 
+               <h3 id="span-classdac-eyebrow-data-eyebrowandroid-a-classexternal-hrefhttpsgithubcomgooglesamplesandroid-architecture-android-architecture-blueprints-a-span"> <span class="dac-eyebrow" data-eyebrow="Android"> <a class="external" href="https://github.com/googlesamples/android-architecture"> Android Architecture Blueprints </a> </span> </h3> 
+               <div class="devsite-landing-row-item-description-content">
+                 A collection of samples to discuss and showcase different architectural tools and patterns for Android apps. 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-column"> 
+            <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-landing-row dac-landing-row-item dac-heading-tiny dac-grow-1 dac-heading-linked
+" background="white"> 
+             <div class="devsite-landing-row-item-description"> 
+              <div class="devsite-landing-row-item-body"> 
+               <h3 id="span-classdac-eyebrow-data-eyebrowjava-a-classexternal-hrefhttpsgithubcomgooglesamplesandroid-universalmusicplayer-universal-android-music-player-sample-a-span"> <span class="dac-eyebrow" data-eyebrow="Java"> <a class="external" href="https://github.com/googlesamples/android-UniversalMusicPlayer"> Universal Android Music Player Sample </a> </span> </h3> 
+               <div class="devsite-landing-row-item-description-content">
+                 This sample shows how to implement an audio media app that works across multiple form factors and provide a consistent user experience on Android phones, tablets, Auto, Wear and Cast devices. 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+            <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-landing-row dac-landing-row-item dac-heading-tiny dac-grow-1 dac-heading-linked
+" background="white"> 
+             <div class="devsite-landing-row-item-description"> 
+              <div class="devsite-landing-row-item-body"> 
+               <h3 id="span-classdac-eyebrow-data-eyebrowjava-a-classexternal-hrefhttpsgithubcomgooglesamplesandroid-architecture-components-android-architecture-components-samples-a-span"> <span class="dac-eyebrow" data-eyebrow="Java"> <a class="external" href="https://github.com/googlesamples/android-architecture-components"> Android Architecture Components samples </a> </span> </h3> 
+               <div class="devsite-landing-row-item-description-content">
+                 Samples for Android Architecture Components. 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-3-up
+                  " background="grey"> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-landing-row dac-landing-row-item dac-heading-tiny dac-heading-linked
+" background="white"> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="span-classdac-eyebrow-data-eyebrowjava-a-classexternal-hrefhttpsgithubcomgooglesamplesandroid-testing-android-testing-samples-a-span"> <span class="dac-eyebrow" data-eyebrow="Java"> <a class="external" href="https://github.com/googlesamples/android-testing"> Android testing samples </a> </span> </h3> 
+              <div class="devsite-landing-row-item-description-content">
+                A collection of samples demonstrating different frameworks and techniques for automated testing. 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-landing-row dac-landing-row-item dac-heading-tiny dac-heading-linked
+" background="white"> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="span-classdac-eyebrow-data-eyebrowkotlin-a-classexternal-hrefhttpsgithubcomgooglesamplesandroid-topeka-topeka-for-android-a-span"> <span class="dac-eyebrow" data-eyebrow="Kotlin"> <a class="external" href="https://github.com/googlesamples/android-topeka"> Topeka for Android </a> </span> </h3> 
+              <div class="devsite-landing-row-item-description-content">
+                A fun to play quiz that showcases material design on Android. 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-landing-row dac-landing-row-item dac-heading-tiny dac-heading-linked
+" background="white"> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="span-classdac-eyebrow-data-eyebrowc-a-classexternal-hrefhttpsgithubcomgooglesamplesandroid-ndk-android-ndk-samples-a-span"> <span class="dac-eyebrow" data-eyebrow="C++"> <a class="external" href="https://github.com/googlesamples/android-ndk"> Android NDK Samples </a> </span> </h3> 
+              <div class="devsite-landing-row-item-description-content">
+                Android NDK samples with Android Studio. 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-1-up
+                  dac-gutter" background="grey"> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+      "> 
+            <div class="dac-subtitle dac-center"> 
+             <h3>Libraries</h3> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-2-up
+                  dac-gutter" background="grey"> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-landing-row dac-landing-row-item dac-illustration dac-illustration-keyline-4 dac-landing-row-item-invert dac-landing-row-bg-slate dac-grow-7
+"> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="span-classdac-eyebrow-data-eyebrowlibraries-a-hreftopiclibrariesarchitecture-android-architecture-components-a-span"> <span class="dac-eyebrow" data-eyebrow="Libraries"> <a href="https://developer.android.com/topic/libraries/architecture/"> Android Architecture components </a> </span> </h3> 
+              <div class="devsite-landing-row-item-description-content">
+                This library provides APIs for essential app architecture tasks like lifecycle management and data persistence, so you can write modular apps with less boilerplate code. 
+              </div> 
+              <div class="devsite-landing-row-item-buttons"> 
+               <a href="https://developer.android.com/topic/libraries/architecture" class="button dac-button dac-alt-flat-button"> Learn more </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-landing-row dac-landing-row-item dac-grow-5
+" background="white"> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="span-classdac-eyebrow-data-eyebrowlibraries-a-hreftopiclibrariessupport-library-support-library-a-span"> <span class="dac-eyebrow" data-eyebrow="Libraries"> <a href="https://developer.android.com/topic/libraries/support-library/"> Support library </a> </span> </h3> 
+              <div class="devsite-landing-row-item-description-content"> 
+               <p>The Android Support Library offers backward-compatible versions of a number of features, including others not built into the framework.</p> 
+               <div class="dac-illustration-block">
+                <img src="https://developer.android.com/images/landing/keyline-illustration-5.svg" class="block">
+               </div> 
+              </div> 
+              <div class="devsite-landing-row-item-buttons"> 
+               <a href="https://developer.android.com/topic/libraries/support-library" class="button dac-button dac-flat-button"> Learn more </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-3-up
+                  " background="grey"> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-landing-row dac-landing-row-item" background="white"> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="span-classdac-eyebrow-data-eyebrowlibraries-a-hreftopiclibrariesdata-binding-data-binding-library-a-span"> <span class="dac-eyebrow" data-eyebrow="Libraries"> <a href="https://developer.android.com/topic/libraries/data-binding/"> Data binding library </a> </span> </h3> 
+              <div class="devsite-landing-row-item-description-content">
+                The Data Binding Library enables you to write declarative layouts. 
+              </div> 
+              <div class="devsite-landing-row-item-buttons"> 
+               <a href="https://developer.android.com/topic/libraries/data-binding" class="button dac-button dac-flat-button"> Learn more </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-landing-row dac-landing-row-item" background="white"> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="span-classdac-eyebrow-data-eyebrowlibraries-a-hreftrainingtesting-android-test-a-span"> <span class="dac-eyebrow" data-eyebrow="Libraries"> <a href="https://developer.android.com/training/testing"> Android Test </a> </span> </h3> 
+              <div class="devsite-landing-row-item-description-content">
+                Android Test helps you build and run test code for your app. 
+              </div> 
+              <div class="devsite-landing-row-item-buttons"> 
+               <a href="https://developer.android.com/topic/libraries/testing-support-library" class="button dac-button dac-flat-button"> Learn more </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-landing-row dac-landing-row-item" background="white"> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="span-classdac-eyebrow-data-eyebrowlibraries-a-hrefgoogleplaybillingbilling_library-play-billing-library-a-span"> <span class="dac-eyebrow" data-eyebrow="Libraries"> <a href="https://developer.android.com/google/play/billing/billing_library"> Play Billing library </a> </span> </h3> 
+              <div class="devsite-landing-row-item-description-content">
+                In-app Billing on Google Play provides a simple interface for sending In-app Billing requests and managing In-app Billing transactions with Google Play. 
+              </div> 
+              <div class="devsite-landing-row-item-buttons"> 
+               <a href="https://developer.android.com/google/play/billing/billing_library" class="button dac-button dac-flat-button"> Learn more </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-1-up
+                  "> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+      "> 
+            <div class="dac-subtitle dac-center"> 
+             <h3>Developer Tools</h3> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-2-up
+                  "> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-column"> 
+            <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-landing-row dac-landing-row-item dac-illustration dac-illustration-keyline-1 dac-landing-row-item-invert dac-landing-row-bg-green dac-full-height
+"> 
+             <div class="devsite-landing-row-item-description"> 
+              <div class="devsite-landing-row-item-body"> 
+               <h3 id="span-classdac-eyebrow-data-eyebrowguide-a-hreftrainingbasicsfirstapp-android-emulator-a-span"> <span class="dac-eyebrow" data-eyebrow="Guide"> <a href="https://developer.android.com/training/basics/firstapp/"> Android Emulator </a> </span> </h3> 
+               <div class="devsite-landing-row-item-description-content">
+                 You can install and run your app on the Android Emulator faster than with a physical device. It simulates various device configurations and hardware sensors, and it uses a snapshot to quickly resume exactly where you left off. 
+               </div> 
+               <div class="devsite-landing-row-item-buttons"> 
+                <a href="https://developer.android.com/studio/run/emulator" class="button dac-button dac-flat-button"> Run your app </a> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-column"> 
+            <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-landing-row dac-landing-row-item dac-grow-1 dac-heading-small
+" background="grey"> 
+             <div class="devsite-landing-row-item-description"> 
+              <div class="devsite-landing-row-item-body"> 
+               <h3 id="span-classdac-eyebrow-data-eyebrowguide-a-hrefstudiobuild-configure-your-build-a-span"> <span class="dac-eyebrow" data-eyebrow="Guide"> <a href="https://developer.android.com/studio/build/"> Configure your build </a> </span> </h3> 
+               <div class="devsite-landing-row-item-description-content">
+                 Android Studio uses Gradle, an advanced build toolkit, to automate the build process, while allowing you to define flexible, custom build configurations. 
+               </div> 
+               <div class="devsite-landing-row-item-buttons"> 
+                <a href="https://developer.android.com/studio/build" class="button dac-button dac-alt-flat-button"> Configure your build </a> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+            <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-landing-row dac-landing-row-item dac-grow-1 dac-heading-small
+" background="grey"> 
+             <div class="devsite-landing-row-item-description"> 
+              <div class="devsite-landing-row-item-body"> 
+               <h3 id="span-classdac-eyebrow-data-eyebrowguide-a-hrefstudiodebug-build-your-ui-layout-a-span"> <span class="dac-eyebrow" data-eyebrow="Guide"> <a href="https://developer.android.com/studio/debug/"> Build your UI layout </a> </span> </h3> 
+               <div class="devsite-landing-row-item-description-content">
+                 Android Studio includes a layout editor that allows you to build and preview your app UI by dragging elements into a visual design editor instead of writing layout XML by hand. 
+               </div> 
+               <div class="devsite-landing-row-item-buttons"> 
+                <a href="https://developer.android.com/studio/write/layout-editor" class="button dac-button dac-alt-flat-button"> Learn about the layout editor </a> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-1-up
+                  dac-landing-row dac-landing-row-collapse dac-landing-row-bg-blob-1 dac-profile-blob
+" background="grey"> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-landing-row dac-landing-row-collapse dac-illustration dac-landing-row-bg-illustration-2
+"> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="span-classdac-eyebrow-dac-dark-grey-eyebrow-data-eyebrowguide-a-hrefstudioprofile-profile-your-app-performance-a-span"> <span class="dac-eyebrow dac-dark-grey-eyebrow" data-eyebrow="Guide"> <a href="https://developer.android.com/studio/profile/"> Profile your app performance </a> </span> </h3> 
+              <div class="devsite-landing-row-item-description-content">
+                Poor app performance can ruin the user experience and destroy your app's reputation. If it ever responds slowly, shows choppy animations, freezes, crashes, or consumes a lot of power, your users will notice. To avoid these performance problems, use the Android Profiler to measure your app's memory, CPU, and network usage. 
+              </div> 
+              <div class="devsite-landing-row-item-buttons"> 
+               <a href="https://developer.android.com/studio/profile/android-profiler" class="button dac-button dac-alt-flat-button"> Profile your app </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-1-up
+                  dac-gutter" background="grey"> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+      "> 
+            <div class="dac-subtitle dac-center"> 
+             <h3>More education</h3> 
+             <p>Check out these other resources for beginner and experienced Android developers.</p> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-3-up
+                  " background="grey"> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-landing-row dac-landing-row-item dac-heading-tiny dac-heading-linked
+" background="white"> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="a-hrefhttpscodelabsdevelopersgooglecomcatandroid-android-codelabs-a"> <a href="https://codelabs.developers.google.com/?cat=Android"> Android codelabs </a> </h3> 
+              <div class="devsite-landing-row-item-description-content">
+                Codelabs are short, self-paced tutorials that step you through the process of building a particular type of app or adding a new feature to an existing app. 
+              </div> 
+              <div class="devsite-landing-row-item-buttons"> 
+               <a href="https://codelabs.developers.google.com/?cat=Android" class="button dac-button dac-flat-button"> Try a codelab </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-landing-row dac-landing-row-item dac-heading-tiny dac-heading-linked
+" background="white"> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="a-hrefhttpswwwudacitycomgoogle-online-video-courses-a"> <a href="https://www.udacity.com/google"> Online video courses </a> </h3> 
+              <div class="devsite-landing-row-item-description-content">
+                Google partnered with Udacity to teach Android development with online videos. Several free courses are available, or you can enroll in the Nanodegree program. 
+              </div> 
+              <div class="devsite-landing-row-item-buttons"> 
+               <a href="https://www.udacity.com/google" class="button dac-button dac-flat-button"> Go to Udacity </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="devsite-landing-row-item
+      devsite-landing-row-item-no-media
+      dac-landing-row dac-landing-row-item dac-heading-tiny dac-heading-linked
+" background="white"> 
+            <div class="devsite-landing-row-item-description"> 
+             <div class="devsite-landing-row-item-body"> 
+              <h3 id="a-hrefhttpsdevelopersgooglecomtrainingadf-training-courses-a"> <a href="https://developers.google.com/training/adf"> Training courses </a> </h3> 
+              <div class="devsite-landing-row-item-description-content">
+                These online trainings provide a guided path through the process of learning how to build Android apps. Courses are available for new and advanced developers. 
+              </div> 
+              <div class="devsite-landing-row-item-buttons"> 
+               <a href="https://developers.google.com/training/adf" class="button dac-button dac-flat-button"> See the courses </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+         <section class="devsite-landing-row
+                  devsite-landing-row-1-up
+                  dac-dynamic-content-section"> 
+          <div class="devsite-landing-row-group"> 
+           <div class="devsite-landing-row-item
+      "> 
+            <div class="dac-subtitle dac-center"> 
+             <h3>Latest videos</h3> 
+            </div> 
+            <div class="resource-widget" data-query="type:youtube+tag:develop" data-sortorder="-timestamp" data-maxresults="3" data-show-authors="true"> 
+            </div> 
+            <div class="dac-dynamic-content-more"> 
+             <a class="button dac-button dac-alt-flat-button" href="https://www.youtube.com/user/androiddevelopers/search?query=%23develop"> More videos </a> 
+            </div> 
+           </div> 
+          </div> 
+         </section> 
+        </div> 
+       </article> 
+      </article> 
+     </devsite-content> 
+    </div> 
+    <devsite-footer-promos ds-is="footer-promos" class="devsite-footer"> 
+     <nav> 
+      <ul class="devsite-footer-promos-list"> 
+       <li class="devsite-footer-promo"> <a href="//twitter.com/AndroidDev" class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Twitter Promo"> <img class="devsite-footer-promo-icon" src="https://developer.android.com/_static/android/images/logo-twitter.svg" alt="Twitter"> Twitter </a> 
+        <div class="devsite-footer-promo-description">
+         Follow @AndroidDev on Twitter
+        </div> </li> 
+       <li class="devsite-footer-promo"> <a href="//www.youtube.com/user/androiddevelopers" class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer YouTube Promo"> <img class="devsite-footer-promo-icon" src="//www.gstatic.com/images/icons/material/product/2x/youtube_48dp.png" alt="YouTube"> YouTube </a> 
+        <div class="devsite-footer-promo-description">
+         Check out Android Developers on YouTube
+        </div> </li> 
+      </ul> 
+     </nav> 
+    </devsite-footer-promos> 
+    <devsite-footer-linkboxes ds-is="footer-linkboxes" class="devsite-footer"> 
+     <nav class="devsite-footer-linkboxes nocontent"> 
+      <ul class="devsite-footer-linkboxes-list"> 
+       <li class="devsite-footer-linkbox "> <h3 class="devsite-footer-linkbox-heading">More Android</h3> 
+        <ul class="devsite-footer-linkbox-list"> 
+         <li class="devsite-footer-linkbox-item"> <a href="//www.android.com" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 1)"> Android </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="//www.android.com/enterprise/" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 2)"> Enterprise </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="//www.android.com/security-center/" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 3)"> Security </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="//source.android.com" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 4)"> Source </a> </li> 
+        </ul> </li> 
+       <li class="devsite-footer-linkbox "> <h3 class="devsite-footer-linkbox-heading">Support</h3> 
+        <ul class="devsite-footer-linkbox-list"> 
+         <li class="devsite-footer-linkbox-item"> <a href="//issuetracker.google.com/issues/new?component=190923&amp;template=841312" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 1)"> Report platform bug </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="//issuetracker.google.com/issues/new?component=192697" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 2)"> Report documentation bug </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="//support.google.com/googleplay/android-developer" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 3)"> Google Play support </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="//docs.google.com/forms/d/e/1FAIpQLSf27XIxoFmNpTjTYdk-m1uKWGqEnd7_4C_E1AD5fdCfyTBWNA/viewform?usp=pp_url&amp;entry.1909689089&amp;entry.208743710&amp;entry.408796755&amp;entry.1341430893&amp;entry.594931249&amp;entry.1640656812&amp;entry.1759804042&amp;entry.1441312344=developer.android.com" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 4)"> Join user studies </a> </li> 
+        </ul> </li> 
+       <li class="devsite-footer-linkbox "> <h3 class="devsite-footer-linkbox-heading">Documentation</h3> 
+        <ul class="devsite-footer-linkbox-list"> 
+         <li class="devsite-footer-linkbox-item"> <a href="/guide" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 1)"> Developer guides </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="/design" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 2)"> Design guides </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="/reference" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 3)"> API reference </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="/samples" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 4)"> Samples </a> </li> 
+         <li class="devsite-footer-linkbox-item"> <a href="/studio/intro" class="devsite-footer-linkbox-link
+                    gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 5)"> Android Studio </a> </li> 
+        </ul> </li> 
+      </ul> 
+     </nav> 
+    </devsite-footer-linkboxes> 
+    <devsite-footer-utility ds-is="footer-utility" class="devsite-footer"> 
+     <div class="devsite-footer-utility"> 
+      <nav class="devsite-nav devsite-footer-sites"> 
+       <a href="https://developers.google.com/" class="devsite-footer-sites-logo-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Google Developers Link"> <img class="devsite-footer-sites-logo" src="https://developer.android.com/_static/images/lockup-color.png" alt="Google Developers"> </a> 
+       <ul class="devsite-footer-sites-list"> 
+        <li class="devsite-footer-sites-item"> <a href="//developer.android.com" class="devsite-footer-sites-link
+                  gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Android Link"> Android </a> </li> 
+        <li class="devsite-footer-sites-item"> <a href="//developer.chrome.com/home" class="devsite-footer-sites-link
+                  gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Chrome Link"> Chrome </a> </li> 
+        <li class="devsite-footer-sites-item"> <a href="//firebase.google.com" class="devsite-footer-sites-link
+                  gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Firebase Link"> Firebase </a> </li> 
+        <li class="devsite-footer-sites-item"> <a href="//cloud.google.com" class="devsite-footer-sites-link
+                  gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Google Cloud Platform Link"> Google Cloud Platform </a> </li> 
+        <li class="devsite-footer-sites-item"> <a href="//developers.google.com/products/" class="devsite-footer-sites-link
+                  gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer All products Link"> All products </a> </li> 
+       </ul> 
+      </nav> 
+      <nav class="devsite-nav"> 
+       <ul class="devsite-footer-utility-list"> 
+        <li class="devsite-footer-utility-item
+                 "> <a class="devsite-footer-utility-link
+                  gc-analytics-event" href="//policies.google.com/privacy" data-category="Site-Wide Custom Events" data-label="Footer Privacy link"> Privacy </a> </li> 
+        <li class="devsite-footer-utility-item
+                 "> <a class="devsite-footer-utility-link
+                  gc-analytics-event" href="https://developer.android.com/license" data-category="Site-Wide Custom Events" data-label="Footer License link"> License </a> </li> 
+        <li class="devsite-footer-utility-item
+                 "> <a class="devsite-footer-utility-link
+                  gc-analytics-event" href="https://developer.android.com/distribute/marketing-tools/brand-guidelines" data-category="Site-Wide Custom Events" data-label="Footer Brand guidelines link"> Brand guidelines </a> </li> 
+        <li class="devsite-footer-utility-item
+                 devsite-footer-utility-button"> <span class="devsite-footer-utility-description">Get news and tips by email</span> <a class="devsite-footer-utility-link
+                  gc-analytics-event" href="https://developer.android.com/newsletter/#subscribe" data-category="Site-Wide Custom Events" data-label="Footer Subscribe link"> Subscribe </a> </li> 
+       </ul> 
+       <form class="devsite-footer-utility-language"> 
+        <select class="devsite-footer-utility-language-select" name="language" track-name="click" track-type="languageSelector"> <option value="id" track-metadata-original-language="en" track-metadata-selected-language="id" track-name="changed" track-type="languageSelector"> Bahasa Indonesia </option> <option value="de" track-metadata-original-language="en" track-metadata-selected-language="de" track-name="changed" track-type="languageSelector"> Deutsch </option> <option value="en" track-metadata-original-language="en" track-metadata-selected-language="en" track-name="changed" track-type="languageSelector" selected> English </option> <option value="es" track-metadata-original-language="en" track-metadata-selected-language="es" track-name="changed" track-type="languageSelector"> Español </option> <option value="es_419" track-metadata-original-language="en" track-metadata-selected-language="es_419" track-name="changed" track-type="languageSelector"> Español (América Latina) </option> <option value="pt_br" track-metadata-original-language="en" track-metadata-selected-language="pt_br" track-name="changed" track-type="languageSelector"> Português Brasileiro </option> <option value="vi" track-metadata-original-language="en" track-metadata-selected-language="vi" track-name="changed" track-type="languageSelector"> Tiếng Việt </option> <option value="tr" track-metadata-original-language="en" track-metadata-selected-language="tr" track-name="changed" track-type="languageSelector"> Türkçe </option> <option value="fr" track-metadata-original-language="en" track-metadata-selected-language="fr" track-name="changed" track-type="languageSelector"> français </option> <option value="ru" track-metadata-original-language="en" track-metadata-selected-language="ru" track-name="changed" track-type="languageSelector"> Русский </option> <option value="th" track-metadata-original-language="en" track-metadata-selected-language="th" track-name="changed" track-type="languageSelector"> ภาษาไทย </option> <option value="ja" track-metadata-original-language="en" track-metadata-selected-language="ja" track-name="changed" track-type="languageSelector"> 日本語 </option> <option value="zh_cn" track-metadata-original-language="en" track-metadata-selected-language="zh_cn" track-name="changed" track-type="languageSelector"> 简体中文 </option> <option value="zh_tw" track-metadata-original-language="en" track-metadata-selected-language="zh_tw" track-name="changed" track-type="languageSelector"> 繁體中文 </option> <option value="ko" track-metadata-original-language="en" track-metadata-selected-language="ko" track-name="changed" track-type="languageSelector"> 한국어 </option> </select> 
+       </form> 
+      </nav> 
+     </div> 
+    </devsite-footer-utility> 
+   </div>
+  </div> 
+  <devsite-sitemask ds-is="site-mask"></devsite-sitemask> 
+  <devsite-snackbar ds-is="snackbar"></devsite-snackbar> 
+  <devsite-tooltip ds-is="tooltip"></devsite-tooltip> 
+  <devsite-analytics ds-is="analytics"> 
+   <script type="application/json" analytics>[{"metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}, "dimensions": {"dimension6": "en", "dimension4": "Android Developers", "dimension5": "en", "dimension3": false, "dimension1": "Signed out"}, "gaid": "UA-5831155-1"}, {"metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}, "dimensions": {"dimension6": "en", "dimension4": "Android Developers", "dimension5": "en", "dimension3": false, "dimension1": "Signed out"}, "gaid": "UA-49880327-2"}]</script> 
+   <script type="application/json" gtm>["GTM-KMSWPCJ"]</script> 
+  </devsite-analytics> 
+  <script>
+    (function(d,e,v,E,l,o,p,r,s,_,__){d['GoogleDevelopersObject']=[!0,l,o,p,r,s];
+    _=e.createElement(v);_.async=1;_.src=E;__=e.getElementsByTagName(v)[0];
+    __.parentNode.insertBefore(_,__);})(window, document, 'script',
+      'https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/js/app_loader.js',
+      'en',
+      'https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/js/devsite_app.js',
+      'https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android',
+      !0,
+      ['/_pwa/android/manifest.json',
+       '/_static/images/video-placeholder.svg',
+       'https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/images/favicon.png','https://www.gstatic.com/devrel-devsite/v2d3f51e0e36cf44c0ea43e06bb3229f7b8f9185fc524119df719c84031ee17e4/android/images/lockup.svg','https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons'],
+       'https://android-dot-devsite-v2-prod.appspot.com')
+   </script>  
+ </body>
+</html>
